@@ -31,3 +31,4 @@ const InfoCard = ({
     </div>
   );
 };
+export default InfoCard;

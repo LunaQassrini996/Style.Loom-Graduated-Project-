@@ -1,12 +1,12 @@
 import { useSelector } from "react-redux";
-import InfoCard from "./InfoCard";
+import InfoCard from "../Components/InfoCard";
 import type { RootState } from "../redux/store/store";
 
 const CardContainer = () => {
   const cards = useSelector((state: RootState) => state.cards);
 
   return (
-    <section className="bg-transparent py-20 px-6 md:px-16 relative">
+    <section className="bg-[#0d0d0d] py-20 px-6 md:px-16 relative">
       <div className="max-w-7xl mx-auto border-2 border-dashed border-[#3a3a3a] rounded-3xl overflow-hidden">
         <div className="divide-y divide-dashed divide-[#2f2f2f]">
           <div className="p-10 md:p-14 text-left"></div>
