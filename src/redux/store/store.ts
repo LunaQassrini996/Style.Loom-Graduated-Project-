@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import faqReducer from "../reducers/faqSlice";
+import faqReducer from "../slices/faqSlice";
 
 export const store = configureStore({
   reducer: {

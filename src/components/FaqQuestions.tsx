@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import type { RootState } from "../redux/store/store";
-import type { FAQ } from "../types/FAQtypes";
-import arrowDown from "../../public/Images/Home page photos/Icon.svg";
+import type { FAQ } from "../redux/types/FAQtypes";
+import arrowDown from "/assets/Images/Home page photos/Icon.svg";
 
 const FaqQuestions = () => {
   const faqs = useSelector((state: RootState) => state.faqs) as FAQ[];
@@ -44,13 +44,13 @@ const FaqQuestions = () => {
             return (
               <div
                 key={faq.id}
-                className={`border-t-2 border-l-2 border-r-2 border-dashed border-gray-600 p-7
+                className={`border-t-2  border-l-2 border-r-2 border-dashed border-gray-600 p-7 
                   ${index === 0 ? "rounded-t-lg" : ""}
                   ${isLastTwo ? "border-b-2 rounded-b-lg" : ""}
                 `}
               >
-                <h3 className="text-lg font-semibold mb-2">{faq.question}</h3>
-                <p className="text-sm text-gray-300 leading-relaxed">
+                <h3 className="text-2xl font-medium mb-2">{faq.question}</h3>
+                <p className="text-lg font-normal text-gray-300 leading-relaxed">
                   {faq.answer}
                 </p>
               </div>
