@@ -7,6 +7,8 @@ import ProductsPage from './Pages/ProductsPage/ProductsPage.tsx'
 import ProductsDetails from './Pages/ProductsDetails/ProductsDetails.tsx'
 import ContactPage from './Pages/ContactPage/ContactPage.tsx'
 import App from './App.tsx'
+import { store } from './redux/store/store.ts'
+import { Provider } from 'react-redux'
 
 const routes = createBrowserRouter([
   {path:"/",element:<App/>,
@@ -20,6 +22,9 @@ const routes = createBrowserRouter([
 ])
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={routes} />
+     <Provider store={store}>
+     <RouterProvider router={routes} />
+    </Provider>
   </StrictMode>,
 )
+
