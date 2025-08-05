@@ -18,6 +18,7 @@
     
     
 }
+
 @layer utilities{
     @keyframes tickerScroll {
         0%{
@@ -31,3 +32,4 @@
         animation: tickerScroll 10s linear infinite;
     }
 }
+
