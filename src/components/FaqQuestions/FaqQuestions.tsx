@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import type { RootState } from "../redux/store/store";
-import type { FAQ } from "../redux/types/FAQtypes";
+import type { RootState } from "../../redux/store/store";
+import type { FAQ } from "../../redux/types/FAQtypes";
 import arrowDown from "/assets/Images/Home page photos/Icon.svg";
 
 const FaqQuestions = () => {

@@ -1,7 +1,10 @@
+import FaqQuestions from "../../components/FaqQuestions/FaqQuestions";
 
 
 export default function HomePage() {
   return (
-    <div></div>
+    <div>
+      <FaqQuestions/>
+    </div>
   )
 }
