@@ -4,7 +4,7 @@ const InfoCard = ({
   title,
   description,
   layout = "vertical",
-}: InfoCardProps) => {
+}:InfoCardProps) => {
   return (
     <div className="relative p-6 rounded-xl flex flex-col justify-between min-h-[220px] overflow-hidden bg-transparent">
       {imageSrc && (
@@ -25,8 +25,8 @@ const InfoCard = ({
             />
           </div>
         )}
-        <h3 className="text-white text-base font-semibold mb-1">{title}</h3>
-        <p className="text-gray-400 text-sm">{description}</p>
+        <h3 className="text-white text-2xl font-medium mb-1">{title}</h3>
+        <p className="text-gray-400 text-lg font-normal ">{description}</p>
       </div>
     </div>
   );
