@@ -1,3 +1,10 @@
+export interface InfoCardProps{
+  iconSrc:string;
+  imageSrc:string;
+  title:string;
+  description:string;
+  layout?: string;
+}
 const InfoCard = ({
   iconSrc,
   imageSrc,

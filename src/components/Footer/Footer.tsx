@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="border-t-2 border-dashed border-dark-15">
-    <div className=" whitespace-nowrap  flex justify-between items-center gap-2 overflow-hidden py-[50px] animate-ticker">
+    <div className=" whitespace-nowrap  flex justify-between items-center gap-2  overflow-hidden py-[50px] animate-ticker">
         {footerBar.map((item, index) => (
           <div key={index} className="inline-flex  items-center gap-4 px-4">
             <span className="2xl:text-3xl lg:text-2xl md:text-xl text-xl text-dark-20 font-normal font-roboto ">{item.phrase}</span>

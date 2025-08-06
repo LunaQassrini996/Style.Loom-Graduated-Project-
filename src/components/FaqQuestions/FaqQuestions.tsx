@@ -44,7 +44,7 @@ const FaqQuestions = () => {
             return (
               <div
                 key={faq.id}
-                className={`border-t-2  border-l-2 border-r-2 border-dashed border-gray-600 p-7 
+                className={`border-t-2  border-l-2 border-r-2 border-dashed border-gray-600 p-[50px] 
                   ${index === 0 ? "rounded-t-lg" : ""}
                   ${isLastTwo ? "border-b-2 rounded-b-lg" : ""}
                 `}
