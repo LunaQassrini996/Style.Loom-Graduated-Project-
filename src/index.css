@@ -1,9 +1,13 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 @tailwind utilities;
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+@import "tailwindcss";
+
+
 
 @theme {
     --font-roboto: "Roboto", sans-serif;
@@ -15,6 +19,12 @@
     --color-dark-20:#333333;
     --color-brown-70:#C2B4A3;
     --color-brown-80:#D6CDC2;
+
+     --font-roboto: "Roboto", sans-serif;
+    --font-mono: "Roboto Mono", monospace;
+    --color-brown-60: #AE9B84;
+    --color-dark-10: #1A1A1A;
+    --color-brown-70: #C2B4A3;
     
     
 }
@@ -32,4 +42,5 @@
         animation: tickerScroll 10s linear infinite;
     }
 }
+
 
