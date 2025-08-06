@@ -1,11 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-
- import statsReducer from '../slices/statsSlice.ts'
-import faqReducer from "../slices/faqSlice";
+ import statsReducer from '../../redux/slices/statsSlice.ts'
+import faqReducer from "../../redux/slices/faqSlice.ts";
 
 export const store = configureStore({
   reducer: {
-    stats: statsReducer
+    stats: statsReducer,
     faqs: faqReducer,
   },
 });

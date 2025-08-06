@@ -29,7 +29,7 @@ const FaqQuestions = () => {
 
   return (
     <>
-      <section className=" text-white py-12 px-4 md:px-12">
+      <section className=" text-white py-12 2xl:px-[162px] lg:px-[80px] md:px-10 px-4">
         <div className="border-2 border-dashed border-gray-600 p-6 mb-6 rounded-lg">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Necessitatibus quaerat, soluta exercitationem suscipit earum
