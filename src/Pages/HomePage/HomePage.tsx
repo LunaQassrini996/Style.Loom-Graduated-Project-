@@ -1,6 +1,8 @@
 
 import CardContainer from '../../Components/CardContainer/CardContainer'
+import ElevateYourWardrobeSection from '../../Components/ElevateYourWardrobeSection/ElevateYourWardrobeSection'
 import FaqQuestions from '../../Components/FaqQuestions/FaqQuestions'
+import FashionJourneySection from '../../Components/FashionJourneySection/FashionJourneySection'
 import Hero from '../../Components/Hero/Hero'
 
 
@@ -12,7 +14,10 @@ export default function HomePage() {
           <Hero/>
         </div>
         <CardContainer/>
+        <FashionJourneySection/>
       <FaqQuestions/>
+      <ElevateYourWardrobeSection/>
+
     </div>
   )
 }
