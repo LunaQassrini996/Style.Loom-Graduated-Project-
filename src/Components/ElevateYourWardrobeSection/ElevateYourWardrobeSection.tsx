@@ -19,7 +19,7 @@ export default function ElevateYourWardrobeSection() {
             
         </div>
         
-           <img className=" 2xl:w-[623px] lg:w-[524px] md:w-[524px] w-[306px]  absolute 2xl:bottom-0 lg:bottom-[7px] md:-bottom-2.5 bottom-52  2xl:right-0 lg:right-0 md:right-0 -right-20 " src="/assets/Images/Home page photos/Abstract Design (6).png"/>
+           <img className=" 2xl:w-[623px] lg:w-[535px] md:w-[524px] w-[306px]  absolute 2xl:bottom-0 lg:bottom-[3px] md:-bottom-2.5 bottom-52  2xl:right-0 lg:right-0 md:right-0 -right-20 " src="/assets/Images/Home page photos/Abstract Design (6).png"/>
         
         
     </div>

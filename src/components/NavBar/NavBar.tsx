@@ -19,7 +19,7 @@ export default function NavBar() {
     localStorage.setItem('theme', darkMode ? 'dark' : 'light');
   }, [darkMode]);
   return (
-    <nav className=" bg-white dark:bg-dark-06 fixed z-50 w-full 2xl:px-[162px] lg:px-[80px] md:px-10 px-4 2xl:py-[30px] lg:py-6 md:py-6 py-5 flex justify-between items-center ">
+    <nav className=" bg-white dark:bg-dark-06 fixed z-[100] w-full 2xl:px-[162px] lg:px-[80px] md:px-10 px-4 2xl:py-[30px] lg:py-6 md:py-6 py-5 flex justify-between items-center ">
       <div className="2xl:flex lg:flex md:flex hidden justify-between items-center w-full relative after:content-[''] after:absolute after:-bottom-6 after:left-1/2 after:-translate-x-1/2 after:w-full after:border-b-2 after:border-dashed after:border-dark-15">
       <div className=" flex justify-start items-center gap-[14px]">
         <NavLink
