@@ -1,4 +1,4 @@
-
+import testimonialsReducer from "../slices/testimonialsSlice"; // تأكد من وجود هذا
 import { configureStore } from "@reduxjs/toolkit";
  import statsReducer from '../../redux/slices/statsSlice.ts'
 import faqReducer from "../../redux/slices/faqSlice.ts";
@@ -7,6 +7,7 @@ export const store = configureStore({
   reducer: {
     stats: statsReducer,
     faqs: faqReducer,
+    testimonials: testimonialsReducer,
     cards: cardReducer,
   },
 });

@@ -14,10 +14,7 @@ const FaqQuestions = () => {
     const handleResize = () => {
       const small = window.innerWidth < 768;
       setIsSmallScreen(small);
-
-      if (!small) {
-        setShowAll(false);
-      }
+      if (!small) setShowAll(false);
     };
 
     handleResize();
@@ -27,10 +24,10 @@ const FaqQuestions = () => {
 
   const visibleFaqs = isSmallScreen && !showAll ? faqs.slice(0, 3) : faqs;
 
-  return (
-    <>
-      <section className=" text-white py-12 2xl:px-[162px] lg:px-[80px] md:px-10 px-4">
-        <div className="border-2 border-dashed border-gray-600 p-6 mb-6 rounded-lg">
+  return(
+    <section className="bg-dark-06 text-white  2xl:px-[162px] lg:px-[80px] md:px-10 px-4">
+      <div className="border-2 border-dashed border-gray-600 rounded-lg overflow-hidden">
+        <div className="p-6 font-roboto hover:bg-[#1a1a1a] border-b-2 border-dashed border-gray-600">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Necessitatibus quaerat, soluta exercitationem suscipit earum
           perspiciatis commodi temporibus sed, esse iure, in iusto! Molestias
@@ -38,40 +35,41 @@ const FaqQuestions = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 md:divide-x md:divide-dashed md:divide-gray-600">
-          {visibleFaqs.map((faq, index) => {
-            const isLastTwo = index >= visibleFaqs.length - 2;
-
-            return (
-              <div
-                key={faq.id}
-                className={`border-t-2  border-l-2 border-r-2 border-dashed border-gray-600 p-[50px] 
-                  ${index === 0 ? "rounded-t-lg" : ""}
-                  ${isLastTwo ? "border-b-2 rounded-b-lg" : ""}
-                `}
-              >
-                <h3 className="text-2xl font-medium mb-2">{faq.question}</h3>
-                <p className="text-lg font-normal text-gray-300 leading-relaxed">
-                  {faq.answer}
-                </p>
-              </div>
-            );
-          })}
+          {visibleFaqs.map((faq, index) => (
+            <div
+              key={faq.id}
+              className={`p-[40px] hover:bg-[#1a1a1a] border-b-2 border-dashed border-gray-600 ${
+                index % 2 === 0 ? "md:border-r-2" : ""
+              }`}
+            >
+              <h3 className="text-2xl font-medium mb-2 font-roboto">
+                {faq.question}
+              </h3>
+              <p className="text-lg font-normal text-gray-300 leading-relaxed font-roboto">
+                {faq.answer}
+              </p>
+            </div>
+          ))}
         </div>
 
         {isSmallScreen && faqs.length > 3 && !showAll && (
-          <div className="mt-6 text-center ml-16">
+          <div className="flex items-center justify-center p-6 hover:bg-[#1a1a1a] border-t-2 border-dashed border-gray-600">
             <button
               onClick={() => setShowAll(true)}
-              className="px-6 py-2 bg-none text-gray-300 rounded-md font-medium hover:bg-gray-200 hover:text-black transition flex items-center justify-center gap-2"
+              className="px-6 py-2 text-gray-600 font-medium font-mono hover:bg-gray-200 hover:text-black transition flex items-center justify-center gap-2 rounded"
             >
               View All
-              <img src={arrowDown} alt="icon" className="w-4 h-4" />
+              <img
+                src={arrowDown}
+                alt="icon"
+                className="w-4 h-4 text-gray-600"
+              />
             </button>
           </div>
         )}
-      </section>
-    </>
+      </div>
+    </section> 
   );
-};
+}
 
 export default FaqQuestions;

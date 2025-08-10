@@ -4,6 +4,7 @@ import ElevateYourWardrobeSection from '../../Components/ElevateYourWardrobeSect
 import FaqQuestions from '../../Components/FaqQuestions/FaqQuestions'
 import FashionJourneySection from '../../Components/FashionJourneySection/FashionJourneySection'
 import Hero from '../../Components/Hero/Hero'
+import Testimonials from '../../Components/Testimonials/Testimonials'
 
 
 export default function HomePage() {
@@ -15,6 +16,7 @@ export default function HomePage() {
         </div>
         <CardContainer/>
         <FashionJourneySection/>
+        <Testimonials/>
       <FaqQuestions/>
       <ElevateYourWardrobeSection/>
 
