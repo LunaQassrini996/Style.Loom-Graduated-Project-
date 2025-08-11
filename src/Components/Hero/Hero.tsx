@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux";
-
 import ShopNowBtn from "../ShopNowBtn/ShopNowBtn";
 import {  setStatstab } from "../../redux/slices/statsSlice";
 import type { RootState } from "../../redux/store/store";
@@ -11,6 +10,7 @@ export default function Hero() {
   const dispatch=useDispatch();
   const stats=useSelector((state:RootState)=>state.stats.currentStatsTab)
   return (
+    <>
     <div className='2xl:max-w-[1596px] 2xl:rounded-[20px] lg:rounded-2xl rounded-[14px] border-2 border-dashed border-[#262626]  justify-self-center w-full overflow-hidden'>
 
       <div className="w-full 2xl:h-[624px] min-[390px]:h-[442px] h-[250px] 2xl:bg-[url(/images/hero.png)] min-[390px]:bg-[url(/images/hero2.png)] bg-[url(/images/hero3.png)] bg-bottom bg-cover"></div>
@@ -43,6 +43,7 @@ export default function Hero() {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

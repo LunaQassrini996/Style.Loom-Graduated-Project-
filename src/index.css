@@ -1,11 +1,22 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
+<<<<<<< HEAD
+=======
+@tailwind utilities;
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@import "tailwindcss";
+
+
+
+>>>>>>> 67b7e98a8d8cf0e2782f5197ff402d1fa32523b1
 @theme {
     --font-roboto: "Roboto", sans-serif;
     --font-mono: "Roboto Mono", monospace;
     --color-brown-60: #AE9B84;
+<<<<<<< HEAD
     --color-dark-10: #1A1A1A;
     --color-brown-70: #C2B4A3;
 
@@ -33,3 +44,33 @@
 .custom-scrollbar:hover::-webkit-scrollbar-thumb {
     background: #888;
 }
+=======
+    --color-dark-06:#0F0F0F;
+    --color-dark-10:#1A1A1A;
+    --color-dark-12: #1F1F1F;
+    --color-dark-15:#262626;
+    --color-dark-20:#333333;
+    --color-brown-70:#C2B4A3;
+    --color-brown-80:#D6CDC2;
+
+    
+    
+    
+}
+
+@layer utilities{
+    @keyframes tickerScroll {
+        0%{
+            transform: translateX(0%);
+        }
+        100%{
+            transform: translateX(-50%);
+        }
+    }
+    .animate-ticker{
+        animation: tickerScroll 10s linear infinite;
+    }
+}
+
+
+>>>>>>> 67b7e98a8d8cf0e2782f5197ff402d1fa32523b1
