@@ -1,0 +1,379 @@
+import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
+
+interface Product {
+    id: number;
+    image: string;
+    type: string;
+    category: string;
+    title: string;
+    fit: string;
+    price: number;
+    rating: number;
+}
+const Products: Product[] = [
+    {
+        id: 1,
+        image: "/images/women4.png",
+        type: "Womenswear",
+        category: "Womens",
+        title: "Elegant Evening Gown",
+        fit: "flowing skirt",
+        price: 109.99,
+        rating: 4.5
+    },
+    {
+        id: 2,
+        image: "/images/women2.png",
+        type: "Womenswear",
+        category: "Womens",
+        title: "Timeless A-line Evening Dress",
+        fit: "Ankle-length",
+        price: 109.99,
+        rating: 4.5
+    },
+    {
+        id: 3,
+        image: "/images/women3.png",
+        type: "Womenswear",
+        category: "Womens",
+        title: "Floral Bloom Maxi Dress",
+        fit: "Slim Fit",
+        price: 54.99,
+        rating: 3.9
+    },
+    {
+        id: 4,
+        image: "/images/women4.png",
+        type: "Womenswear",
+        category: "Womens",
+        title: "Elegant Evening Gown",
+        fit: "flowing skirt",
+        price: 89.99,
+        rating: 3.9
+    },
+    {
+        id: 5,
+        image: "/images/women5.png",
+        type: "Womenswear",
+        category: "Womens",
+        title: "Boho Chic Printed Scarf",
+        fit: "Lightweight",
+        price: 19.99,
+        rating: 2.8,
+    },
+    {
+        id: 6,
+        image: "/images/women2.png",
+        type: "Womenswear",
+        category: "Womens",
+        title: "Elegant Evening Gown",
+        fit: "flowing skirt",
+        price: 109.99,
+        rating: 3.7
+    },
+    {
+        id: 7,
+        image: "/images/mens1.webp",
+        type: "Menswear",
+        category: "Mens",
+        title: "Classic Oxford Blouse",
+        fit: "Regular fit",
+        price: 49.99,
+        rating: 4.6
+    },
+    {
+        id: 8,
+        image: "/images/mens2.webp",
+        type: "Menswear",
+        category: "Mens",
+        title: "Slim Fit Dress Blouse",
+        fit: "Slim fit",
+        price: 54.99,
+        rating: 4.7
+    },
+    {
+        id: 9,
+        image: "/images/mens3.webp",
+        type: "Menswear",
+        category: "Mens",
+        title: "Casual Linen Blouse",
+        fit: "Relaxed fit",
+        price: 39.99,
+        rating: 5.0
+    },
+    {
+        id: 10,
+        image: "/images/mens4.webp",
+        type: "Menswear",
+        category: "Mens",
+        title: "Striped Formal Blouse",
+        fit: "Tailored fit",
+        price: 59.99,
+        rating: 4.3
+    },
+    {
+        id: 11,
+        image: "/images/mens5.webp",
+        type: "Menswear",
+        category: "Mens",
+        title: "Short Sleeve Summer Blouse",
+        fit: "Loose fit",
+        price: 34.99,
+        rating: 2.7
+    },
+    {
+        id: 12,
+        image: "/images/mens6.webp",
+        type: "Menswear",
+        category: "Mens",
+        title: "Embroidered Evening Blouse",
+        fit: "Regular fit",
+        price: 64.99,
+        rating: 3.6
+    },
+    {
+        id: 13,
+        image: "/images/accs1.png",
+        type: "Accessories",
+        category: "Womens",
+        title: "Urban Chic Handbag",
+        fit: "Spacious",
+        price: 49.99,
+        rating: 4.2
+    },
+    {
+        id: 14,
+        image: "/images/accs2.png",
+        type: "Accessories",
+        category: "Womens",
+        title: "Timeless Fedora",
+        fit: "Any face shape",
+        price: 79.99,
+        rating: 4.5
+    },
+    {
+        id: 15,
+        image: "/images/accs3.png",
+        type: "Accessories",
+        category: "Womens",
+        title: "Wide-Brim Bucket Hat",
+        fit: "Any face shape",
+        price: 69.99,
+        rating: 4.8
+    },
+    {
+        id: 16,
+        image: "/images/bag1.png",
+        type: "Hand Bag",
+        category: "Womens",
+        title: "Bold Backpack",
+        fit: "Roomy interior",
+        price: 129.99,
+        rating: 4.9
+    },
+    {
+        id: 17,
+        image: "/images/bag2.png",
+        type: "Hand Bag",
+        category: "Womens",
+        title: "Night Out Glam",
+        fit: "Compact size",
+        price: 79.99,
+        rating: 3.3
+    },
+    {
+        id: 18,
+        image: "/images/bag4.png",
+        type: "Hand Bag",
+        category: "Mens",
+        title: "Multi Use Bag",
+        fit: "Spacious",
+        price: 89.99,
+        rating: 4.6
+    },
+    {
+        id: 19,
+        image: "/images/bag5.png",
+        type: "Hand Bag",
+        category: "Mens",
+        title: "vintage Bag",
+        fit: "Spacious",
+        price: 99.99,
+        rating: 4.2
+    },
+    {
+        id: 20,
+        image: "/images/bag6.png",
+        type: "Hand Bag",
+        category: "Mens",
+        title: "Shoulder Carried Bag",
+        fit: "Compact Size",
+        price: 49.99,
+        rating: 3.3
+    },
+    {
+        id: 21,
+        image: "/images/hat1.png",
+        type: "Accessories",
+        category: "Mens",
+        title: "Elegant Straw Hat",
+        fit: "Fits All",
+        price: 29.99,
+        rating: 3.8
+    },
+    {
+        id: 22,
+        image: "/images/hat2.png",
+        type: "Accessories",
+        category: "Mens",
+        title: "Classic White Hat",
+        fit: "Fits All",
+        price: 49.99,
+        rating: 3.9
+    },
+    {
+        id: 23,
+        image: "/images/hat3.png",
+        type: "Accessories",
+        category: "Mens",
+        title: "Elegant Fidora",
+        fit: "Fits All",
+        price: 59.99,
+        rating: 3.4
+    },
+    {
+        id: 24,
+        image: "/images/watch1.png",
+        type: "Accessories",
+        category: "Mens",
+        title: "Black Smart Watch",
+        fit: "Fits All",
+        price: 99.99,
+        rating: 4.5
+    },
+    {
+        id: 26,
+        image: "/images/watch2.png",
+        type: "Accessories",
+        category: "Mens",
+        title: "Black Vintage Watch",
+        fit: "Fits All",
+        price: 79.99,
+        rating: 4.4
+    },
+    {
+        id: 27,
+        image: "/images/watch3.png",
+        type: "Accessories",
+        category: "Mens",
+        title: "Classic Silver Watch",
+        fit: "Fits All",
+        price: 199.99,
+        rating: 4.5
+    },
+    {
+        id: 28,
+        image: "/images/kids1.webp",
+        type: "Kidswear",
+        category: "Kids",
+        title: "Princess Sparkle Dress",
+        fit: "Age 4-6",
+        price: 24.99,
+        rating: 3.7
+    },
+    {
+        id: 29,
+        image: "/images/kids2.png",
+        type: "Kidswear",
+        category: "Kids",
+        title: "Princess blue Dress",
+        fit: "Age 6-8",
+        price: 34.99,
+        rating: 3.5
+    },
+    {
+        id: 30,
+        image: "/images/kids3.png",
+        type: "Kidswear",
+        category: "Kids",
+        title: "white t shirt",
+        fit: "Age 3-5",
+        price: 39.99,
+        rating: 5.0
+    },
+    {
+        id: 31,
+        image: "/images/kids4.webp",
+        type: "Kidswear",
+        category: "Kids",
+        title: "baige t shirt",
+        fit: "Age 5-7",
+        price: 29.99,
+        rating: 4.5
+    },
+    {
+        id: 32,
+        image: "/images/kids2.png",
+        type: "Accessories",
+        category: "Kids",
+        title: "Princess blue Dress",
+        fit: "School Size",
+        price: 44.99,
+        rating: 3.9
+    },
+    {
+        id: 33,
+        image: "/images/kids3.png",
+        type: "Kidswear",
+        category: "Kids",
+        title: "white t shirt",
+        fit: "Age 4-8",
+        price: 32.99,
+        rating: 4.5
+    }
+
+]
+function shuffleArray<T>(array: T[]): T[] {
+    const arr = array.slice(0, 12);
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+}
+const getItemsByTab = (tab: string) => {
+    if (tab === "All") {
+        return shuffleArray(Products)
+    }
+    else
+        return Products.filter((item) => item.category === tab)
+}
+
+interface ProductState {
+    products: Product[],
+    currentProducts: Product[],
+    openedProduct:Product | null
+
+}
+const initialState: ProductState = {
+    products: Products,
+    currentProducts: shuffleArray(Products),
+    openedProduct: null
+}
+
+const ProductSlice = createSlice({
+    name: "products",
+    initialState,
+    reducers: {
+        setCurrentProducts:(state,action:PayloadAction<string>)=>{
+            state.currentProducts=getItemsByTab(action.payload)
+        },
+        getProductById:(state,action:PayloadAction<number>)=>{
+            state.openedProduct=state.products.find((item)=>item.id===action.payload) || null
+ 
+        }
+    }
+})
+
+export default ProductSlice.reducer;
+export const { setCurrentProducts } = ProductSlice.actions;

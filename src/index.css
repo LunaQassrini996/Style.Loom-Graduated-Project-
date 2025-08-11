@@ -2,11 +2,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-@theme{
+@theme {
     --font-roboto: "Roboto", sans-serif;
     --font-mono: "Roboto Mono", monospace;
     --color-brown-60: #AE9B84;
-    --color-dark-10:#1A1A1A;
-    --color-brown-70:#C2B4A3;
-    
+    --color-dark-10: #1A1A1A;
+    --color-brown-70: #C2B4A3;
+
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 1px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #000;
+    width: 1px;
+}
+
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #444 #000;
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
+    background: #888;
 }
