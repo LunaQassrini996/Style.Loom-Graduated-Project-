@@ -1,10 +1,15 @@
 
+import { useNavigate } from 'react-router-dom'
 import ShopNowBtn from '../ShopNowBtn/ShopNowBtn'
+import { useDispatch } from 'react-redux'
+import { setOpenedProduct } from '../../redux/slices/ProductSlice'
 
 export default function ProductCard({id,image,type,title,fit,price}:{id:number,image:string,type:string,title:string,fit:string,price:number}) {
+    const navigate=useNavigate()
+    const dispatch=useDispatch()
   return (
-    <div className='w-fit 2xl:h-[639px] lg:h-[491px] h-[474px] lg: 2xl:p-[30px] xl:border-r-2 lg:border-r-[1.5px]  border-r border-dashed border-[#262626] p-5 lg:pb-[30px] flex flex-col 2xl:gap-[30px] p- lg:gap-6 gap-5 '>
-        <div className='overflow-hidden 2xl:rounded-t-[50px] lg:rounded-t-[30px] rounded-t-[20px] flex justify-center items-center  2xl:h-[386px] lg:h-[219px] h-[220px]'>
+    <div  className='w-fit hover:bg-[#2d2d2d] ease-in-out duration-150 2xl:h-[639px] lg:h-[491px] h-[474px] lg: 2xl:p-[30px] xl:border-r-2 lg:border-r-[1.5px]  border-r border-dashed border-[#262626] p-5 lg:pb-[30px] flex flex-col 2xl:gap-[30px] p- lg:gap-6 gap-5 '>
+        <div onClick={()=>{navigate(`/products/${id}`);dispatch(setOpenedProduct(id))}} className='overflow-hidden 2xl:rounded-t-[50px] lg:rounded-t-[30px] rounded-t-[20px] flex justify-center items-center  2xl:h-[386px] lg:h-[219px] h-[220px]'>
             <img src={image} className='object-cover 2xl:w-[472px] lg:w-[386.67px] w-[318px] ' />
         </div>
         <div className='w-full flex justify-between items-center'>

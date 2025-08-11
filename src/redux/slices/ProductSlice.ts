@@ -29,7 +29,7 @@ const Products: Product[] = [
         title: "Timeless A-line Evening Dress",
         fit: "Ankle-length",
         price: 109.99,
-        rating: 4.5
+        rating: 3.5
     },
     {
         id: 3,
@@ -39,7 +39,7 @@ const Products: Product[] = [
         title: "Floral Bloom Maxi Dress",
         fit: "Slim Fit",
         price: 54.99,
-        rating: 3.9
+        rating: 2.9
     },
     {
         id: 4,
@@ -59,7 +59,7 @@ const Products: Product[] = [
         title: "Boho Chic Printed Scarf",
         fit: "Lightweight",
         price: 19.99,
-        rating: 2.8,
+        rating: 4.8,
     },
     {
         id: 6,
@@ -79,7 +79,7 @@ const Products: Product[] = [
         title: "Classic Oxford Blouse",
         fit: "Regular fit",
         price: 49.99,
-        rating: 4.6
+        rating: 2.6
     },
     {
         id: 8,
@@ -89,7 +89,7 @@ const Products: Product[] = [
         title: "Slim Fit Dress Blouse",
         fit: "Slim fit",
         price: 54.99,
-        rating: 4.7
+        rating: 3.7
     },
     {
         id: 9,
@@ -109,7 +109,7 @@ const Products: Product[] = [
         title: "Striped Formal Blouse",
         fit: "Tailored fit",
         price: 59.99,
-        rating: 4.3
+        rating: 3.3
     },
     {
         id: 11,
@@ -129,7 +129,7 @@ const Products: Product[] = [
         title: "Embroidered Evening Blouse",
         fit: "Regular fit",
         price: 64.99,
-        rating: 3.6
+        rating: 4.6
     },
     {
         id: 13,
@@ -139,7 +139,7 @@ const Products: Product[] = [
         title: "Urban Chic Handbag",
         fit: "Spacious",
         price: 49.99,
-        rating: 4.2
+        rating: 3.2
     },
     {
         id: 14,
@@ -149,7 +149,7 @@ const Products: Product[] = [
         title: "Timeless Fedora",
         fit: "Any face shape",
         price: 79.99,
-        rating: 4.5
+        rating: 2.5
     },
     {
         id: 15,
@@ -169,7 +169,7 @@ const Products: Product[] = [
         title: "Bold Backpack",
         fit: "Roomy interior",
         price: 129.99,
-        rating: 4.9
+        rating: 3.9
     },
     {
         id: 17,
@@ -179,7 +179,7 @@ const Products: Product[] = [
         title: "Night Out Glam",
         fit: "Compact size",
         price: 79.99,
-        rating: 3.3
+        rating: 4.3
     },
     {
         id: 18,
@@ -189,7 +189,7 @@ const Products: Product[] = [
         title: "Multi Use Bag",
         fit: "Spacious",
         price: 89.99,
-        rating: 4.6
+        rating: 2.6
     },
     {
         id: 19,
@@ -199,7 +199,7 @@ const Products: Product[] = [
         title: "vintage Bag",
         fit: "Spacious",
         price: 99.99,
-        rating: 4.2
+        rating: 3.2
     },
     {
         id: 20,
@@ -209,7 +209,7 @@ const Products: Product[] = [
         title: "Shoulder Carried Bag",
         fit: "Compact Size",
         price: 49.99,
-        rating: 3.3
+        rating: 2.3
     },
     {
         id: 21,
@@ -219,7 +219,7 @@ const Products: Product[] = [
         title: "Elegant Straw Hat",
         fit: "Fits All",
         price: 29.99,
-        rating: 3.8
+        rating: 4.8
     },
     {
         id: 22,
@@ -239,7 +239,7 @@ const Products: Product[] = [
         title: "Elegant Fidora",
         fit: "Fits All",
         price: 59.99,
-        rating: 3.4
+        rating: 4.4
     },
     {
         id: 24,
@@ -249,7 +249,7 @@ const Products: Product[] = [
         title: "Black Smart Watch",
         fit: "Fits All",
         price: 99.99,
-        rating: 4.5
+        rating: 2.5
     },
     {
         id: 26,
@@ -259,7 +259,7 @@ const Products: Product[] = [
         title: "Black Vintage Watch",
         fit: "Fits All",
         price: 79.99,
-        rating: 4.4
+        rating: 3.4
     },
     {
         id: 27,
@@ -289,7 +289,7 @@ const Products: Product[] = [
         title: "Princess blue Dress",
         fit: "Age 6-8",
         price: 34.99,
-        rating: 3.5
+        rating: 4.5
     },
     {
         id: 30,
@@ -309,7 +309,7 @@ const Products: Product[] = [
         title: "baige t shirt",
         fit: "Age 5-7",
         price: 29.99,
-        rating: 4.5
+        rating: 3.5
     },
     {
         id: 32,
@@ -319,7 +319,7 @@ const Products: Product[] = [
         title: "Princess blue Dress",
         fit: "School Size",
         price: 44.99,
-        rating: 3.9
+        rating: 2.9
     },
     {
         id: 33,
@@ -368,7 +368,7 @@ const ProductSlice = createSlice({
         setCurrentProducts:(state,action:PayloadAction<string>)=>{
             state.currentProducts=getItemsByTab(action.payload)
         },
-        getProductById:(state,action:PayloadAction<number>)=>{
+        setOpenedProduct:(state,action:PayloadAction<number>)=>{
             state.openedProduct=state.products.find((item)=>item.id===action.payload) || null
  
         }
@@ -376,4 +376,4 @@ const ProductSlice = createSlice({
 })
 
 export default ProductSlice.reducer;
-export const { setCurrentProducts } = ProductSlice.actions;
+export const { setCurrentProducts,setOpenedProduct } = ProductSlice.actions;
