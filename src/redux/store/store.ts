@@ -3,9 +3,11 @@ import { configureStore } from "@reduxjs/toolkit";
  import statsReducer from '../../redux/slices/statsSlice.ts'
 import faqReducer from "../../redux/slices/faqSlice.ts";
 import cardReducer from '../slices/cardSlice';
+import productsReducer from '../slices/ProductSlice.ts'
 export const store = configureStore({
   reducer: {
     stats: statsReducer,
+    products: productsReducer,
     faqs: faqReducer,
     testimonials: testimonialsReducer,
     cards: cardReducer,

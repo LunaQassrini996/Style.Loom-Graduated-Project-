@@ -16,7 +16,8 @@ export default function Hero() {
       <div className="w-full 2xl:h-[624px] min-[390px]:h-[442px] h-[250px] 2xl:bg-[url(/images/hero.png)] min-[390px]:bg-[url(/images/hero2.png)] bg-[url(/images/hero3.png)] bg-bottom bg-cover"></div>
       <div className="w-full  lg:flex  block   relative bg-white dark:bg-dark-06  ">
         <div className="absolute top-0 left-[50%] translate-[-50%] 2xl:pt-5 2xl:px-5 min-[390px]:p-[14px] z-50 p-0 bg-white dark:bg-dark-06 rounded-2xl ">
-          <ShopNowBtn path={"/products"} btnTitle="Shop Now" showIcon={true} />
+          <ShopNowBtn path={"/products"} btnTitle="Shop Now" showIcon={true}  />
+
         </div>
         <div className="lg:w-[50%] h-full  2xl:p-20 lg:p-[60px] pt-[60px] pb-5 px-5 lg:border-r-2 lg:border-b-0 border-b-2 border-dashed border-gray-600 dark:border-dark-15  flex flex-col gap-[30px]  ">
           <FilterTabs action={(tabname:string)=>dispatch(setStatstab(tabname))} tabs={["All","Mens", "Womens", "Kids"]}/>

@@ -13,6 +13,8 @@
     --font-roboto: "Roboto", sans-serif;
     --font-mono: "Roboto Mono", monospace;
     --color-brown-60: #AE9B84;
+    --color-dark-10: #1A1A1A;
+    --color-brown-70: #C2B4A3;
     --color-dark-06:#0F0F0F;
     --color-dark-10:#1A1A1A;
     --color-dark-12: #1F1F1F;
@@ -24,6 +26,28 @@
     
     
     
+}
+.custom-scrollbar::-webkit-scrollbar {
+    width: 1px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #000;
+    width: 1px;
+}
+
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #444 #000;
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
+    background: #888;
 }
 
 @layer utilities{
