@@ -2,7 +2,7 @@ import TopBanner from "../TopBanner/TopBanner";
 
 export default function FashionJourneySection() {
   return (
-    <section className="2xl:px-[162px] lg:px-[80px] md:px-10 px-4 ">
+    <section className="2xl:px-[162px] lg:px-[80px] md:px-10 px-4 2xl:py-[100px] lg:py-20 md:py-20 py-[50px]  ">
       <div className="border-2 border-dashed border-dark-15 rounded-[20px] overflow-hidden">
         <div className="border-b-2 border-dashed border-dark-15">
           <TopBanner

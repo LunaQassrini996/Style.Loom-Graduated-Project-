@@ -1,39 +1,46 @@
 export interface InfoCardProps{
   iconSrc:string;
-  imageSrc:string;
+  imageSrc?:string;
   title:string;
   description:string;
   layout?: string;
+  paddingY:string,
+  paddingX:string,
 }
 const InfoCard = ({
   iconSrc,
   imageSrc,
   title,
   description,
+  paddingY,
+  paddingX,
   layout = "vertical",
 }: InfoCardProps) => {
   return (
-    <div className="relative p-6 rounded-xl flex flex-col justify-between min-h-[220px] overflow-hidden bg-transparent">
+    <div className={`relative  ${paddingY} rounded-xl flex flex-col min-h-[220px]  ${paddingX} overflow-hidden bg-transparent`}>
       {imageSrc && (
         <img
           src={imageSrc}
           alt={title}
-          className="absolute top-2 right-2 w-24 h-24 object-contain opacity-90 z-0"
+          className="absolute 2xl:-top-1.5 lg:top-1 md:-top-2 -top-3.5 2xl:w-[205px] lg:w-[150px] md:w-[140px] w-[130px] right-0 "
         />
       )}
 
-      <div className="z-10 relative">
+      <div className={`${layout==="horizontal"? "  flex-row gap-6":"flex-col"} flex justify-start items-start  `}>
         {iconSrc && (
-          <div className="w-14 h-14 mb-4  rounded-full flex items-center justify-center">
+          <div className={`${layout==="horizontal"?"flex-shrink-0":"mb-4"}`}>
             <img
               src={iconSrc}
               alt={`${title} icon`}
-              className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
+              className=" 2xl:w-[94px] 2xl:h-[94px] lg:w-[76px] lg:h-[76px] md:w-[76px] md:h-[76px] w-[76px] h-[76px] "
             />
           </div>
         )}
-        <h3 className="text-white text-2xl font-medium mb-1">{title}</h3>
-        <p className="text-gray-400 text-lg font-normal ">{description}</p>
+        <div className="flex flex-col justify-center items-start gap-4 w-full">
+        <h3 className="text-white 2xl:text-2xl lg:text-xl md:text-lg text-lg font-medium ">{title}</h3>
+        <p className=" text-gray-400 2xl:text-lg lg:text-base md:text-base text-sm font-normal ">{description}</p>
+        </div>
+        
       </div>
     </div>
   );
