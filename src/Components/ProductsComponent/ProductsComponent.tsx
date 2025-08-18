@@ -50,21 +50,20 @@ const ProductsComponent: React.FC = () => {
         <ProductCard image={item.image} type={item.type} title={item.title} price={item.price} fit={item.fit} id={item.id} key={index} />
     )
 
-
     return (
-        <div className="w-full justify-self-center max-lg:w-[720px] max-md:w-[358px] ">
-            <div className=" w-full max-md:w-[358px] 2xl:rounded-t-[20px] lg:rounded-t-2xl rounded-t-[14px] xl:border-2 xl:border-b-0 lg:border-[1.5px] lg:border-b-0  border border-b-0 border-dashed border-dark-15 ">
+        <div className="lg:w-full justify-self-center md:w-[720px] max-md:w-[full] ">
+            <div className=" w-full  2xl:rounded-t-[20px] lg:rounded-t-2xl rounded-t-[14px] xl:border-2 xl:border-b-0 lg:border-[1.5px] lg:border-b-0  border border-b-0 border-dashed border-dark-15 ">
                 <TopBanner imgNumber={3} title="Elevate Your Style with Our Latest Collection" paragraph="Each piece is crafted to enhance your fashion statement." tabs={["All","Mens","Womens","Kids"]} action={(tab:string)=>dispatch(setCurrentProducts(tab))} />
             </div>
-            <div className="w-[1596px] max-w-full mx-auto  xl:border-2 xl:border-r-0 lg:border-[1.5px] lg:border-r-0  border border-r-0 border-dashed border-dark-15">
+            <div className="md:w-[1596px] 2xl:rounded-b-[20px] lg:rounded-b-2xl rounded-b-[14px] max-w-full mx-auto  xl:border-2 xl:border-r-0 lg:border-[1.5px] lg:border-r-0  border border-r-0 border-dashed border-dark-15">
                 <div
                     className="2xl:h-[1278px]   lg:h-[982px] h-[1422px] group relative  bg-dark-06 shadow-md overflow-y-auto overflow-x-hidden cursor-grab transition-shadow custom-scrollbar "
                     ref={scrollRef}
                     onMouseDown={onMouseDown}
                     style={{ WebkitOverflowScrolling: "touch" }}
                 >
-                    <div className="grid  xl:divide-y-2 lg:divide-y-[1.5px]   divide-y-[1px] divide-dashed divide-dark-15  lg:grid-cols-3 md:grid-cols-2 grid-cols-1 2xl:auto-rows-[639px] lg:auto-rows-[491px] auto-rows-[474px]  ">
-                        {cards}
+                    <div className="grid  xl:divide-y-2 lg:divide-y-[1.5px]   divide-y-[1px] divide-dashed divide-dark-15  lg:grid-cols-3 md:grid-cols-2 grid-cols-1 2xl:auto-rows-[639px] lg:auto-rows-[491px] auto-rows-[474px]   ">
+                        {cards.slice(0,12)}
                     </div>
                 </div>
                 <div onClick={()=>navigate('/products')} className="cursor-pointer md:hidden w-full py-[30px] px-5 gap-2.5 flex items-center justify-center rounded-b-[14px] border-t border-r border-dashed border-[#262626]">

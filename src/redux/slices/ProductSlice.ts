@@ -330,11 +330,42 @@ const Products: Product[] = [
         fit: "Age 4-8",
         price: 32.99,
         rating: 4.5
-    }
+    },
+    {
+        id: 34,
+        image: "/images/accs1.png",
+        type: "Hand Bag",
+        category: "Womens",
+        title: "Urban Chic Handbag",
+        fit: "Spacious",
+        price: 49.99,
+        rating: 3.2
+    },
+    {
+        id: 35,
+        image: "/images/kidshat1.webp",
+        type: "Accessories",
+        category: "Kids",
+        title: "Cute hat",
+        fit: "School Size",
+        price: 44.99,
+        rating: 2.9
+    },
+    {
+        id: 36,
+        image: "/images/kidshat2.webp",
+        type: "Accessories",
+        category: "Kids",
+        title: "Cute hat",
+        fit: "School Size",
+        price: 44.99,
+        rating: 2.9
+    },
+    
 
 ]
 function shuffleArray<T>(array: T[]): T[] {
-    const arr = array.slice(0, 12);
+    const arr = array;
     for (let i = arr.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [arr[i], arr[j]] = [arr[j], arr[i]];
