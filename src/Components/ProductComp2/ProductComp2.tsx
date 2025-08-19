@@ -10,12 +10,12 @@ export default function ProductComp2() {
     const cards = useSelector((state: RootState) => state.products.currentProducts)
     const dispatch=useDispatch()
     return (
-        <div className=' justify-self-center lg:w-fit overflow-hidden md:w-[720px] max-md:w-[full] 2xl:rounded-[20px] lg:rounded-2xl rounded-[14px] 2xl:border-2 2xl:border-r-0 lg:border-[1.5px] lg:border-r-0 border border-r-0 border-dashed border-[#262626] '>
-            <div className="w-full 2xl:border-r-2 lg:border-r-[1.5px]  border-r border-dashed border-[#262626]">
+        <div className=' justify-self-center lg:w-full overflow-hidden md:w-full max-md:w-[full] 2xl:rounded-[20px] lg:rounded-2xl rounded-[14px] 2xl:border-2 2xl:border-r-0 lg:border-[1.5px] lg:border-r-0  border-2 border-dashed border-[#262626] '>
+            <div className="w-fit 2xl:border-r-2 lg:border-r-[1.5px]  border-r border-dashed border-[#262626]">
                 <TopBanner title="EXPLORE THE LATEST TRENDS AND TIMLESS CLASSICS" imgNumber={2} paragraph="Dive into the world of fashion excellence at StyleLoom. Our curated selection brings together the latest trends and timeless classics" tabs={["All","Mens","Womens","Kids"]} action={(tabname:string)=>dispatch(setCurrentProducts(tabname))} />
             </div>
             <div className='w-full '>
-                <div className='flex items-center justify-between 2xl:p-[30px] p-6 w-full 2xl:border-t-2 2xl:border-b-2 lg:border-t-[1.5px] lg:border-b-[1.5px] border-b border-t 2xl:border-r-2 lg:border-r-[1.5px]  border-r border-dashed border-[#262626]'>
+                <div className='flex items-center justify-between 2xl:p-[30px] p-6 w-full 2xl:border-t-2 2xl:border-b-2 lg:border-t-[1.5px] lg:border-b-[1.5px] border-b-2 border-t-2 2xl:border-r-2 lg:border-r-[1.5px]  border-r-2  border-dashed border-[#262626]'>
                     <h3 className="font-medium text-white 2xl:text-[30px] lg:text-[26px] text-2xl ">CLOTHES COLLECTION</h3>
                     <ShopNowBtn btnTitle="View All" showIcon cart={false} path="#" />
                 </div>
@@ -41,7 +41,7 @@ export default function ProductComp2() {
                 </div>
             </div>
             <div className='w-full '>
-                <div className='flex items-center justify-between 2xl:p-[30px] p-6 w-full 2xl:border-t-2 2xl:border-b-2 lg:border-t-[1.5px] lg:border-b-[1.5px] border-b border-t 2xl:border-r-2 lg:border-r-[1.5px]  border-r border-dashed border-[#262626]'>
+                <div className='flex items-center justify-between 2xl:p-[30px] p-6 w-full 2xl:border-t-2 2xl:border-b-2 lg:border-t-[1.5px] lg:border-b-[1.5px] border-b-2 border-t-2 2xl:border-r-2 lg:border-r-[1.5px]  border-r border-dashed border-[#262626]'>
                     <h3 className="font-medium text-white 2xl:text-[30px] lg:text-[26px] text-2xl ">ACCESSORIES</h3>
                     <ShopNowBtn btnTitle="View All" showIcon cart={false} path="#" />
                 </div>
@@ -67,7 +67,7 @@ export default function ProductComp2() {
                 </div>
             </div>
             <div className='w-full '>
-                <div className='flex items-center justify-between 2xl:p-[30px] p-6 w-full 2xl:border-t-2 2xl:border-b-2 lg:border-t-[1.5px] lg:border-b-[1.5px] border-b border-t 2xl:border-r-2 lg:border-r-[1.5px]  border-r border-dashed border-[#262626]'>
+                <div className='flex items-center justify-between 2xl:p-[30px] p-6 w-full 2xl:border-t-2 2xl:border-b-2 lg:border-t-[1.5px] lg:border-b-[1.5px] border-b-2 border-t-2 2xl:border-r-2 lg:border-r-[1.5px]  border-r border-dashed border-[#262626]'>
                     <h3 className="font-medium text-white 2xl:text-[30px] lg:text-[26px] text-2xl ">BAGS AND HANDBAGS</h3>
                     <ShopNowBtn btnTitle="View All" showIcon cart={false} path="#" />
                 </div>

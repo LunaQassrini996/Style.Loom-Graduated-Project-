@@ -51,7 +51,7 @@ const ProductsComponent: React.FC = () => {
     )
 
     return (
-        <div className="lg:w-full justify-self-center md:w-[720px] max-md:w-[full] ">
+        <div className="lg:w-full justify-self-center md:w-full w-full ">
             <div className=" w-full  2xl:rounded-t-[20px] lg:rounded-t-2xl rounded-t-[14px] xl:border-2 xl:border-b-0 lg:border-[1.5px] lg:border-b-0  border border-b-0 border-dashed border-dark-15 ">
                 <TopBanner imgNumber={3} title="Elevate Your Style with Our Latest Collection" paragraph="Each piece is crafted to enhance your fashion statement." tabs={["All","Mens","Womens","Kids"]} action={(tab:string)=>dispatch(setCurrentProducts(tab))} />
             </div>
@@ -62,12 +62,12 @@ const ProductsComponent: React.FC = () => {
                     onMouseDown={onMouseDown}
                     style={{ WebkitOverflowScrolling: "touch" }}
                 >
-                    <div className="grid  xl:divide-y-2 lg:divide-y-[1.5px]   divide-y-[1px] divide-dashed divide-dark-15  lg:grid-cols-3 md:grid-cols-2 grid-cols-1 2xl:auto-rows-[639px] lg:auto-rows-[491px] auto-rows-[474px]   ">
+                    <div className=" grid xl:divide-y-2 lg:divide-y-[1.5px]   divide-y-[1px] divide-dashed divide-dark-15  lg:grid-cols-3 md:grid-cols-2 grid-cols-1 2xl:auto-rows-[639px] lg:auto-rows-[491px] auto-rows-[474px]   ">
                         {cards.slice(0,12)}
                     </div>
                 </div>
                 <div onClick={()=>navigate('/products')} className="cursor-pointer md:hidden w-full py-[30px] px-5 gap-2.5 flex items-center justify-center rounded-b-[14px] border-t border-r border-dashed border-[#262626]">
-                    <p className="text-[#B3B3B2] text-[16px] leading-[150%] font-mono ">View All</p>
+                    <p className="text-[#24241f] text-[16px] leading-[150%] font-mono ">View All</p>
                     <img src="/images/downarrow.svg" className="size-5" alt="" />
                 </div>
             </div>
