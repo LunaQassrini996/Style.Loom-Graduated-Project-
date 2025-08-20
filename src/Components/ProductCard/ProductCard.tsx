@@ -14,7 +14,7 @@ export default function ProductCard({id,image,type,title,fit,price}:{id:number,i
         </div>
         <div className='w-full flex justify-between items-center'>
             <div className='bg-dark-10 2xl:py-2.5 2xl:px-4 py-2 px-3 border-2 border-dashed border-dark-15 rounded-[100px] 2xl:text-[18px] leading-[150%] text-[#B3B3B2] text-[14px] '>{type}</div>
-            <div className='max-lg:hidden'><ShopNowBtn  btnTitle='Shop Now' path='' showIcon={true} /></div>
+            <div onClick={()=>dispatch(setOpenedProduct(id))} className='max-lg:hidden'><ShopNowBtn  btnTitle='Shop Now' path={`/products/${id}`} showIcon={true} /></div>
         </div>
         <div className='w-full flex flex-col 2xl:gap-3.5 gap-2.5'>
             <h3 className='font-medium 2xl:text-2xl text-[18px] leading-[150%] text-white '>{title}</h3>
