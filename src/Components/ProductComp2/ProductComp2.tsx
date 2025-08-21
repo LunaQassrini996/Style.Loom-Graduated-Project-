@@ -4,7 +4,7 @@ import type { RootState } from "../../redux/store/store";
 import ProductCard from "../ProductCard/ProductCard";
 import TopBanner from "../TopBanner/TopBanner";
 import { setCurrentProducts } from "../../redux/slices/ProductSlice";
-
+import { motion } from "framer-motion";
 
 export default function ProductComp2() {
     const cards = useSelector((state: RootState) => state.products.currentProducts)
@@ -15,10 +15,10 @@ export default function ProductComp2() {
                 <TopBanner title="EXPLORE THE LATEST TRENDS AND TIMLESS CLASSICS" imgNumber={2} paragraph="Dive into the world of fashion excellence at StyleLoom. Our curated selection brings together the latest trends and timeless classics" tabs={["All","Mens","Womens","Kids"]} action={(tabname:string)=>dispatch(setCurrentProducts(tabname))} />
             </div>
             <div className='w-full '>
-                <div className='flex items-center justify-between 2xl:p-[30px] p-6 w-full 2xl:border-t-2 2xl:border-b-2 lg:border-t-2 lg:border-b-2 border-b-2 border-t-2 2xl:border-r-2 lg:border-r-[1.5px]  border-r-2  border-dashed border-[#262626]'>
+                <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className='flex items-center justify-between 2xl:p-[30px] p-6 w-full 2xl:border-t-2 2xl:border-b-2 lg:border-t-2 lg:border-b-2 border-b-2 border-t-2 2xl:border-r-2 lg:border-r-[1.5px]  border-r-2  border-dashed border-[#262626]'>
                     <h3 className="font-medium text-dark-10 dark:text-white 2xl:text-[30px] lg:text-[26px] text-2xl ">CLOTHES COLLECTION</h3>
                     <ShopNowBtn btnTitle="View All" showIcon cart={false} path="#" />
-                </div>
+                </motion.div>
                 <div className="w-full ">
                     <div className="w-full max-lg:hidden grid grid-cols-3">
                         {
@@ -41,10 +41,10 @@ export default function ProductComp2() {
                 </div>
             </div>
             <div className='w-full '>
-                <div className='flex items-center justify-between 2xl:p-[30px] p-6 w-full 2xl:border-t-2 2xl:border-b-2 lg:border-t-[1.5px] lg:border-b-[1.5px] border-b-2 border-t-2 2xl:border-r-2 lg:border-r-[1.5px]  border-r border-dashed border-[#262626]'>
+                <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className='flex items-center justify-between 2xl:p-[30px] p-6 w-full 2xl:border-t-2 2xl:border-b-2 lg:border-t-[1.5px] lg:border-b-[1.5px] border-b-2 border-t-2 2xl:border-r-2 lg:border-r-[1.5px]  border-r border-dashed border-[#262626]'>
                     <h3 className="font-medium text-dark-10 dark:text-white 2xl:text-[30px] lg:text-[26px] text-2xl ">ACCESSORIES</h3>
                     <ShopNowBtn btnTitle="View All" showIcon cart={false} path="#" />
-                </div>
+                </motion.div>
                 <div className="w-full ">
                     <div className="w-full max-lg:hidden grid grid-cols-3">
                         {
@@ -67,10 +67,10 @@ export default function ProductComp2() {
                 </div>
             </div>
             <div className='w-full '>
-                <div className='flex items-center justify-between 2xl:p-[30px] p-6 w-full 2xl:border-t-2 2xl:border-b-2 lg:border-t-[1.5px] lg:border-b-[1.5px] border-b-2 border-t-2 2xl:border-r-2 lg:border-r-[1.5px]  border-r border-dashed border-[#262626]'>
+                <motion.div  initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}}  className='flex items-center justify-between 2xl:p-[30px] p-6 w-full 2xl:border-t-2 2xl:border-b-2 lg:border-t-[1.5px] lg:border-b-[1.5px] border-b-2 border-t-2 2xl:border-r-2 lg:border-r-[1.5px]  border-r border-dashed border-[#262626]'>
                     <h3 className="font-medium text-dark-10 dark:text-white 2xl:text-[30px] lg:text-[26px] text-2xl ">BAGS AND HANDBAGS</h3>
                     <ShopNowBtn btnTitle="View All" showIcon cart={false} path="#" />
-                </div>
+                </motion.div>
                 <div className="w-full">
                     <div className="w-full max-lg:hidden grid grid-cols-3">
                         {

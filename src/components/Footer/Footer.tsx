@@ -2,6 +2,7 @@ import { footerData } from "../../Data/FooterData";
 import { footerBar } from "../../Data/MovingBarData";
 import { media } from "../../Data/SocialMediaData";
 import { FaArrowRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 export default function Footer() {
   return (
     <footer className="border-t-2 border-dashed border-dark-15">
@@ -15,7 +16,7 @@ export default function Footer() {
         ))}
       </div>
       <div className=" 2xl:px-[162px] lg:px-[80px] md:px-10 px-4 py-[100px] border-b-2 border-t-2 border-dashed border-dark-15">
-        <div className=" flex flex-col 2xl:flex-row lg:flex-row md:flex-row justify-between items-start 2xl:items-center lg:items-center md:items-center gap-[30px]">
+        <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className=" flex flex-col 2xl:flex-row lg:flex-row md:flex-row justify-between items-start 2xl:items-center lg:items-center md:items-center gap-[30px]">
         <img className=" hidden dark:block 2xl:w-[788px] lg:w-[560px] md:w-[357px] w-[357px]" src="/assets/Images/Home page photos/whitefooterlogo.svg"/>
         <img  className=" block dark:hidden 2xl:w-[788px] lg:w-[560px] md:w-[357px] w-[357px]" src="/assets/Images/Home page photos/vectorpaint (1).svg"/>
         <div className="flex justify-center items-center 2xl:gap-5 lg:gap-4 md:gap-4 gap-4">
@@ -25,14 +26,14 @@ export default function Footer() {
             </div>
           ))}
         </div>
-        </div>
+        </motion.div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 2xl:px-[162px] lg:px-[80px] md:px-10 px-4 py-[80px] border-b-2 border-dashed border-dark-15 ">
       
       {footerData.columns.map((column, index) => (
         <div key={index}>
-          <h4 className="font-medium font-roboto  text-dark-10 dark:text-white 2xl:text-[22px] lg:text-lg md:text-base text-base mb-[30px]">{column.title}</h4>
-          <ul className="text-zinc-600 2xl:text-xl lg:text-base md:text-sm text-sm font-normal font-mono flex flex-wrap items-center gap-2">
+          <motion.h4 initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="font-medium font-roboto  text-dark-10 dark:text-white 2xl:text-[22px] lg:text-lg md:text-base text-base mb-[30px]">{column.title}</motion.h4>
+          <motion.ul initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="text-zinc-600 2xl:text-xl lg:text-base md:text-sm text-sm font-normal font-mono flex flex-wrap items-center gap-2">
             {column.text.map((item, idx) =>
               item === "•" ? (
                 <li key={idx} className="text-dark-15">•</li>
@@ -42,31 +43,31 @@ export default function Footer() {
                 </li>
               )
             )}
-          </ul>
+          </motion.ul>
         </div>
       ))}
 
       
       <div className="flex flex-col justify-center items-start">
-        <h4 className="font-medium font-roboto text-dark-10 dark:text-white  2xl:text-[22px] lg:text-lg md:text-base text-base mb-6">Subscribe to Newsletter</h4>
-        <div className="relative w-full">
+        <motion.h4 initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="font-medium font-roboto text-dark-10 dark:text-white  2xl:text-[22px] lg:text-lg md:text-base text-base mb-6">Subscribe to Newsletter</motion.h4>
+        <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="relative w-full">
           <input
             type="email"
             placeholder="Your Email"
             className="w-full 2xl:px-6 lg:px-5 md:px-5 px-5 2xl:py-[18px] lg:py-[14px] md:py-[14px] py-[14px] pr-10 rounded-xl bg-brown-70 dark:bg-dark-10 text-white placeholder-zinc-600 placeholder:font-normal 2xl:placeholder:text-lg lg:placeholder:text-sm md:placeholder:text-sm placeholder:text-sm placeholder:font-mono focus:outline-none"
           />
           <FaArrowRight className="absolute right-3 top-1/2 transform -translate-y-1/2  text-dark-20 dark:text-brown-60" />
-        </div>
+        </motion.div>
       </div>
     </div>
-    <div className="text-zinc-700 2xl:text-lg lg:text-sm md:text-sm text-sm font-normal font-mono flex flex-col 2xl:flex-row lg:flex-row md:flex-row justify-between items-start 2xl:items-center lg:items-center md:items-center gap-5  2xl:px-[162px] lg:px-[80px] md:px-10 px-4 py-[50px]">
+    <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="text-zinc-700 2xl:text-lg lg:text-sm md:text-sm text-sm font-normal font-mono flex flex-col 2xl:flex-row lg:flex-row md:flex-row justify-between items-start 2xl:items-center lg:items-center md:items-center gap-5  2xl:px-[162px] lg:px-[80px] md:px-10 px-4 py-[50px]">
       <p>© 2024 StyleLoom. All rights reserved.</p>
       <div className="flex justify-center items-center gap-3">
         <a>Terms & Conditions</a>
         <span className="h-4  border"></span>
         <a href="#">Privacy Policy</a>
       </div>
-    </div>
+    </motion.div>
     </footer>
   )
 }

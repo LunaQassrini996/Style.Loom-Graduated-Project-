@@ -5,6 +5,7 @@ import TopBanner from "../TopBanner/TopBanner";
 import TitleAndButton from "../TitleAndButton/TitleAndButton";
 import { useEffect, useState } from "react";
 
+
 interface CardContainerProps{
   section:"homeCards" | "contactSection2" | "contactSection3";
   layout?:"vertical"|"horizontal";

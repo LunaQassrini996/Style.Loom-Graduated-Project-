@@ -1,5 +1,5 @@
 import TopBanner from "../TopBanner/TopBanner";
-
+import { motion } from "framer-motion";
 export default function FashionJourneySection() {
   return (
     <section className="2xl:px-[162px] lg:px-[80px] md:px-10 px-4 2xl:py-[100px] lg:py-20 md:py-20 py-[50px]  ">
@@ -12,7 +12,7 @@ export default function FashionJourneySection() {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 2xl:divide-x-2 lg:divide-x-2 md:divide-x-2 divide-y-2 divide-dashed divide-dark-15">
+        <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="grid grid-cols-1 md:grid-cols-4 2xl:divide-x-2 lg:divide-x-2 md:divide-x-2 divide-y-2 divide-dashed divide-dark-15">
           <div className="2xl:p-[50px] lg:p-10 md:p-10 p-[30px] flex flex-col justify-start items-start gap-[30px]">
             <p className=" 2xl:text-xl lg:text-lg md:text-lg text-base font-normal font-mono text-brown-60 dark:text-zinc-700">
               Step 01
@@ -72,7 +72,7 @@ export default function FashionJourneySection() {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

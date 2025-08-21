@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom"
-
+import { motion } from "framer-motion";
 export default function ElevateYourWardrobeSection() { 
   const navigate = useNavigate()
 
   return (
     <section className=" 2xl:px-[162px] lg:px-[80px] md:px-10 px-4 2xl:py-[100px] lg:py-20 md:py-20 py-[50px] ">
-         <div className=" relative 2xl:py-[100px] lg:py-20 md:py-14 py-[50px] 2xl:pr-[142px] lg:pr-[120px] md:pr-[120px] pr-[30px] 2xl:pl-[100px] lg:pl-20 md:pl-14 pl-[30px] rounded-[20px] flex flex-col 2xl:flex-row lg:flex-row md:flex-row justify-between 2xl:items-center lg:items-center md:items-center items-start gap-[30px] bg-brown-70 overflow-hidden">
+         <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className=" relative 2xl:py-[100px] lg:py-20 md:py-14 py-[50px] 2xl:pr-[142px] lg:pr-[120px] md:pr-[120px] pr-[30px] 2xl:pl-[100px] lg:pl-20 md:pl-14 pl-[30px] rounded-[20px] flex flex-col 2xl:flex-row lg:flex-row md:flex-row justify-between 2xl:items-center lg:items-center md:items-center items-start gap-[30px] bg-brown-70 overflow-hidden">
         
         <div className="flex flex-col justify-start items-start gap-4">
             <h2 className=" text-white dark:text-dark-06 font-roboto font-medium 2xl:text-[58px] lg:text-5xl md:text-[38px] text-[38px] relative z-20 ">ELEVATE YOUR WARDROBE</h2>
@@ -22,7 +22,7 @@ export default function ElevateYourWardrobeSection() {
            <img className=" 2xl:w-[623px] lg:w-[535px] md:w-[524px] w-[306px]  absolute 2xl:bottom-0 lg:bottom-[3px] md:-bottom-2.5 bottom-52  2xl:right-0 lg:right-0 md:right-0 -right-20 " src="/assets/Images/Home page photos/Abstract Design (6).png"/>
         
         
-    </div>
+    </motion.div>
     </section>
    
   )

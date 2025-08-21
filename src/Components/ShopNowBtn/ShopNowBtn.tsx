@@ -10,7 +10,7 @@ export interface props {
 export default function ShopNowBtn({ path, btnTitle, showIcon, width, cart }: props) {
     const navigate = useNavigate()
     return (
-        <button onClick={() => navigate(path)} className={`cursor-pointer whitespace-nowrap relative ${width} rounded-[12px] border-2 border-dashed border-[#404040] 2xl:py-[18px] 2xl:px-6 py-3.5 px-5 bg-brown-60 dark:bg-dark-12 text-white`}>
+        <button onClick={() => navigate(path)} className={`cursor-pointer whitespace-nowrap relative ${width} rounded-[12px] border-2 border-dashed border-[#404040] 2xl:py-[18px] 2xl:px-6 py-3.5 px-5 bg-brown-60 dark:bg-dark-12 text-white h-fit`}>
             <div className="flex justify-center items-center gap-1">
                 {cart && <img src="/assets/Images/images/cart.svg" alt="" />}
                 <p className="2xl:text-lg text-sm leading-[150%] text-white">{btnTitle}</p>

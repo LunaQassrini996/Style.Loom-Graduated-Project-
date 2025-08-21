@@ -4,16 +4,16 @@ import {  setStatstab } from "../../redux/slices/statsSlice";
 import type { RootState } from "../../redux/store/store";
 import FilterTabs from "../FilterTabs/FilterTabs";
 import AnimatedNumber from "../AnimatedNumber/AnimatedNumber";
-
+import { motion } from "framer-motion";
 
 export default function Hero() {
   const dispatch=useDispatch();
   const stats=useSelector((state:RootState)=>state.stats.currentStatsTab)
   return (
     <>
-    <div className='2xl:max-w-[1596px] 2xl:rounded-[20px] lg:rounded-2xl rounded-[14px] border-2 border-dashed border-dark-15  justify-self-center w-full overflow-hidden'>
+    <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.6}} viewport={{once:true,amount:0.2}} className='2xl:max-w-[1596px] 2xl:rounded-[20px] lg:rounded-2xl rounded-[14px] border-2 border-dashed border-dark-15  justify-self-center w-full overflow-hidden'>
 
-      <div className="w-full 2xl:h-[624px] min-[390px]:h-[442px] h-[250px] 2xl:bg-[url(/assets/Images/images/hero.png)] min-[390px]:bg-[url(/images/hero2.png)] bg-[url(/images/hero3.png)] bg-bottom bg-cover"></div>
+      <div className="w-full 2xl:h-[624px] min-[390px]:h-[442px] h-[250px] 2xl:bg-[url(/assets/Images/images/hero.png)] lg:bg-[url(/assets/Images/images/hero2.png)] md:bg-[url(/assets/Images/images/hero2.png)] min-[390px]:bg-[url(/assets/Images/images/hero2.png)] bg-[url(/assets/Images/images/hero3.png)] bg-bottom bg-cover"></div>
       <div className="w-full  lg:flex  block   relative bg-white dark:bg-dark-06  ">
         <div className="absolute top-0 left-[50%] translate-[-50%] 2xl:pt-5 2xl:px-5 min-[390px]:p-[14px] z-50 p-0 bg-white dark:bg-dark-06 rounded-2xl ">
           <ShopNowBtn path={"/products"} btnTitle="Shop Now" showIcon={true}  />
@@ -43,7 +43,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
     </>
   )
 }

@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import type { RootState } from "../../redux/store/store";
 import type { Testimonial } from "../../redux/types/Testimonialstypes";
 import TopBanner from "../TopBanner/TopBanner";
-
+import { motion } from "framer-motion";
 const Testimonials = () => {
   const testimonials = useSelector(
     (state: RootState) => state.testimonials
@@ -48,7 +48,7 @@ const Testimonials = () => {
                 `}
               
               >
-                <div className="flex justify-between items-center gap-2 mb-4">
+                <motion.div  initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="flex justify-between items-center gap-2 mb-4">
                   <div className="flex justify-center items-center">
                   <img
                     src={testimonial.image}
@@ -70,19 +70,19 @@ const Testimonials = () => {
                     alt="Twitter icon"
                     className="2xl:w-[34px] lg:w-7 md:w-7 w-7 2xl:h-[34px] lg:h-7 md:h-7 h-7"
                   />
-                </div>
+                </motion.div>
 
-                <div className="mb-3">
+                <motion.div  initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="mb-3">
                   <img
                     src={testimonial.rating}
                     alt="rating stars"
                     className="h-5"
                   />
-                </div>
+                </motion.div>
 
-                <p className="2xl:text-lg lg:text-base md:text-sm text-sm font-roboto font-normal text-zinc-700">
+                <motion.p  initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="2xl:text-lg lg:text-base md:text-sm text-sm font-roboto font-normal text-zinc-700">
                   {testimonial.content}
-                </p>
+                </motion.p>
               </div>
               
             );

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 export interface InfoCardProps{
   iconSrc:string;
   imageSrc?:string;
@@ -17,7 +18,7 @@ const InfoCard = ({
   layout = "vertical",
 }: InfoCardProps) => {
   return (
-    <div className={`relative  ${paddingY} rounded-xl flex flex-col min-h-[220px]  ${paddingX} overflow-hidden bg-transparent`}>
+    <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className={`relative  ${paddingY} rounded-xl flex flex-col min-h-[220px]  ${paddingX} overflow-hidden bg-transparent`}>
       {imageSrc && (
         <img
           src={imageSrc}
@@ -42,7 +43,7 @@ const InfoCard = ({
         </div>
         
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default InfoCard;

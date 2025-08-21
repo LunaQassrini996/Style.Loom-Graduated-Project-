@@ -4,7 +4,7 @@ import type { RootState } from "../../redux/store/store";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { setOpenedProduct } from "../../redux/slices/ProductSlice";
-
+import { motion } from "framer-motion";
 
 export default function ProductDetails() {
     const product = useSelector((state: RootState) => state.products.openedProduct)
@@ -33,19 +33,19 @@ export default function ProductDetails() {
     return (
         <div className="xl:divide-x-2 xl:divide-y-2 lg:divide-y-[1.5px] lg:divide-x-[1.5px] divide-x-[1px] divide-y-[1px] divide-dashed divide-[#262626] 2xl:rounded-[20px] lg:rounded-2xl rounded-[14px] xl:border-2 lg:border-[1.5px] border border-dashed border-[#262626] w-full">
             <div className="w-full flex justify-between gap-10 flex-wrap  2xl:p-20 lg:p-[60px] py-[30px] px-5 ">
-                <div className="flex flex-col 2xl:gap-3.5 lg:gap-2.5 gap-1.5">
+                <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="flex flex-col 2xl:gap-3.5 lg:gap-2.5 gap-1.5">
                     <h1 className="font-medium 2xl:text-5xl md:text-[38px] text-[28px] text-dark-20 dark:text-white">{product?.title}</h1>
                     <div className="flex xl:gap-4 gap-3 items-center">
                         <p className="2xl:text-[22px] lg:text-[18px] text-[14px] leading-[150%] text-[#676665]">{product?.fit}</p>
                         <div className="bg-[#152011] rounded-[100px] xl:py-2 xl:px-5  lg:px-4 py-1.5 px-2.5 xl:text-[18px] lg:text-[14px] text-[12px] leading-[150%] text-[#8AF265]">In stock</div>
                     </div>
-                </div>
-                <div className="flex gap-5">
+                </motion.div>
+                <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="flex gap-5">
                     <ShopNowBtn  cart={true} btnTitle="Add To Cart" path="" width="w-full" />
                     <ShopNowBtn  cart={true} btnTitle="Add To Cart" path="" />
-                </div>
+                </motion.div>
             </div>
-            <div className="w-full max-lg:flex-col flex 2xl:gap-[30px] lg:gap-5">
+            <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="w-full max-lg:flex-col flex 2xl:gap-[30px] lg:gap-5">
                 <div className="h-full w-full 2xl:py-[50px] 2xl:px-[30px] lg:p-[30px] p-2.5 xl:border-r-2 lg:border-r-[1.5px] border-r border-dashed border-[#262626] ">
                     <div className="flex items-center justify-center overflow-hidden w-full     2xl:max-h-[604px] lg:max-h-[451px] max-h-[210px]">
                         <img src={product?.image} className="h-full w-full " />
@@ -60,9 +60,9 @@ export default function ProductDetails() {
                     </div>
                 </div>
 
-            </div>
+            </motion.div>
             <div className="flex max-lg:flex-col w-full h-max xl:divide-x-2  lg:divide-x-[1.5px] divide-x-[1px]  divide-dashed divide-[#262626]">
-                <div className="w-full  lg:divide-y-[1.5px] divide-y-[1px] divide-dashed divide-[#262626]">
+                <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="w-full  lg:divide-y-[1.5px] divide-y-[1px] divide-dashed divide-[#262626]">
                     <div className="w-full 2xl:p-[50px] lg:p-10 py-[30px] px-6">
                         <h3 className="font-medium 2xl:text-3xl lg:text-2xl text-[20px]  text-dark-20 dark:text-white  ">Materials, Care and origin</h3>
                     </div>
@@ -79,45 +79,45 @@ export default function ProductDetails() {
                             <img src={product?.image} className="scale-[2500%]" alt="" />
                         </div>
                     </div>
-                </div>
+                </motion.div>
                 <div className="w-full  lg:divide-y-[1.5px] divide-y-[1px] divide-dashed divide-[#262626]">
                     <div className="w-full flex flex-col 2xl:gap-[50px] lg:gap-[30px] gap-5 2xl:p-[50px] lg:p-10 py-[30px] px-6">
-                        <h3 className="font-medium 2xl:text-3xl lg:text-2xl text-[20px] text-dark-20 dark:text-white ">Features</h3>
-                        <ul className="text-[#81807E] 2xl:text-[18px] lg:text-[16px] text-[14px] leading-[150%] list-disc decoration-1">
+                        <motion.h3 initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="font-medium 2xl:text-3xl lg:text-2xl text-[20px] text-dark-20 dark:text-white ">Features</motion.h3>
+                        <motion.ul initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="text-[#81807E] 2xl:text-[18px] lg:text-[16px] text-[14px] leading-[150%] list-disc decoration-1">
                             <li>Distressed detailing for a rugged look</li>
                             <li>Button-up front closure with engraved metal buttons</li>
                             <li>Two chest pockets with buttoned flaps</li>
                             <li>Two side pockets for added functionality</li>
                             <li>Adjustable buttoned cuffs for a personalized fit</li>
                             <li>Back waist tabs for customizable styling</li>
-                        </ul>
+                        </motion.ul>
                     </div>
                     <div className="w-full flex flex-col 2xl:gap-5 gap-4 2xl:p-[50px] lg:p-10 py-[30px] px-6">
-                        <h3 className="font-medium 2xl:text-[20px] lg:text-[18px] text-[16px] text-brown-60 dark:text-white  ">Price</h3>
-                        <div className="w-full flex-wrap flex justify-between items-center max-lg:flex-col gap-5">
+                        <motion.h3 initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="font-medium 2xl:text-[20px] lg:text-[18px] text-[16px] text-brown-60 dark:text-white  ">Price</motion.h3>
+                        <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="w-full flex-wrap flex justify-between items-center max-lg:flex-col gap-5">
                             <div className="flex items-center xl:gap-4 gap-3">
                                 <h3 className="font-medium 2xl:text-3xl lg:text-2xl text-[20px] text-dark-20 dark:text-white  ">${product?.price}</h3>
                                 <p className="text-[#81807E] 2xl:text-[18px] lg:text-[16px] text-[14px] leading-[150%]">( MRP incl. of all taxes )</p>
                             </div>
                             <div className='max-lg:hidden'><ShopNowBtn  btnTitle='Add To Cart' path='' cart={true} /></div>
                             <div className='min-lg:hidden w-full'><ShopNowBtn width="w-full" btnTitle='Add To Cart' path='' cart={true} /></div>
-                        </div>
+                        </motion.div>
                     </div>
                     <div className="w-full flex flex-col 2xl:gap-5 gap-4 2xl:p-[50px] lg:p-10 py-[30px] px-6">
-                        <h3 className="font-medium 2xl:text-[20px] lg:text-[18px] text-[16px] text-brown-60 dark:text-white  ">Available Sizes</h3>
-                        <div className="lg:gap-4 gap-3 flex flex-wrap ">
+                        <motion.h3 initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="font-medium 2xl:text-[20px] lg:text-[18px] text-[16px] text-brown-60 dark:text-white  ">Available Sizes</motion.h3>
+                        <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="lg:gap-4 gap-3 flex flex-wrap ">
                             <div className="rounded-[100px] lg:py-2 lg:px-[34px] py-1.5 px-5 bg-[#1A1A1A] text-white font-mono lg:text-[18px] text-[16px] ">S</div>
                             <div className="rounded-[100px] lg:py-2 lg:px-[34px] py-1.5 px-5 bg-[#1A1A1A] text-white font-mono lg:text-[18px] text-[16px] ">M</div>
                             <div className="rounded-[100px] lg:py-2 lg:px-[34px] py-1.5 px-5 bg-[#1A1A1A] text-white font-mono lg:text-[18px] text-[16px] ">L</div>
                             <div className="rounded-[100px] lg:py-2 lg:px-[34px] py-1.5 px-5 bg-[rgb(26,26,26)] text-white font-mono lg:text-[18px] text-[16px] ">XL</div>
-                        </div>
+                        </motion.div>
 
                     </div>
-                    <div className="w-full 2xl:p-[50px] lg:p-10 py-[30px] px-6">
+                    <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="w-full 2xl:p-[50px] lg:p-10 py-[30px] px-6">
                         <h3 className="font-medium 2xl:text-[20px] lg:text-[18px] text-[16px] text-brown-60 dark:text-white">Ratings & Review</h3>
-                    </div>
+                    </motion.div>
                     <div className="w-full overflow-hidden flex justify-center  flex-wrap max-lg:flex-col max-lg:items-center 2xl:gap-[50px] lg:gap-[30px] gap-5  2xl:p-[50px] lg:p-10 py-[30px] px-6">
-                        <div className="flex items-center lg:flex-col 2xl:gap-2.5 lg:gap-2 gap-5  2xl:w-[177px] lg:w-[145px]">
+                        <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="flex items-center lg:flex-col 2xl:gap-2.5 lg:gap-2 gap-5  2xl:w-[177px] lg:w-[145px]">
                             <h2 className="font-mono font-medium 2xl:text-5xl md:text-[38px] text-[28px]  text-dark-20 dark:text-white">{product?.rating}</h2>
                             <div className="flex 2xl:gap-[5px] gap-1">
                                 {
@@ -127,43 +127,43 @@ export default function ProductDetails() {
                                 }
                             </div>
                             <p className="text-[#81807E] 2xl:text-[18px] lg:text-[16px] text-[14px] leading-[150%]">49 Ratings</p>
-                        </div>
+                        </motion.div>
                         <div className="flex flex-col 2xl:gap-4 lg:gap-3 gap-2.5">
-                            <div className="w-full flex 2xl:gap-5 lg:gap-4 gap-3 items-center">
+                            <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="w-full flex 2xl:gap-5 lg:gap-4 gap-3 items-center">
                                 <img src="/assets/Images/images/star.svg" className="2xl:size-6 lg:size-5 size-[18px]" alt="" />
                                 <p className="text-[#81807E] 2xl:text-[18px] lg:text-[16px] text-[14px] leading-[150%]">05</p>
                                 <div className="2xl:w-[326px] lg:max-w-[275px] md:w-[175px] w-[252px] 2xl:p-2.5 lg:p-1.5 rounded-[100px] border border-[#262626] bg-[#1A1A1A]">
                                     <div style={{ width: ratings[0] }} className={`2xl:h-2 h-1 rounded-[100px] bg-[#AE9B84]`}></div>
                                 </div>
-                            </div>
-                            <div className="w-full flex 2xl:gap-5 lg:gap-4 gap-3 items-center">
+                            </motion.div>
+                            <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="w-full flex 2xl:gap-5 lg:gap-4 gap-3 items-center">
                                 <img src="/assets/Images/images/star.svg" className="2xl:size-6 lg:size-5 size-[18px]" alt="" />
                                 <p className="text-[#81807E] 2xl:text-[18px] lg:text-[16px] text-[14px] leading-[150%]">04</p>
                                 <div className="2xl:w-[326px] lg:max-w-[275px] md:w-[175px]  w-[252px] 2xl:p-2.5 lg:p-1.5 rounded-[100px] border border-[#262626] bg-[#1A1A1A]">
                                     <div style={{ width: ratings[1] }} className={` 2xl:h-2 h-1 rounded-[100px] bg-[#AE9B84]`}></div>
                                 </div>
-                            </div>
-                            <div className="w-full flex 2xl:gap-5 lg:gap-4 gap-3 items-center">
+                            </motion.div>
+                            <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="w-full flex 2xl:gap-5 lg:gap-4 gap-3 items-center">
                                 <img src="/assets/Images/images/star.svg" className="2xl:size-6 lg:size-5 size-[18px]" alt="" />
                                 <p className="text-[#81807E] 2xl:text-[18px] lg:text-[16px] text-[14px] leading-[150%]">03</p>
                                 <div className="2xl:w-[326px] lg:max-w-[275px] md:w-[175px] w-[252px] 2xl:p-2.5 lg:p-1.5 rounded-[100px] border border-[#262626] bg-[#1A1A1A]">
                                     <div style={{ width: ratings[2] }} className={` 2xl:h-2 h-1 rounded-[100px] bg-[#AE9B84]`}></div>
                                 </div>
-                            </div>
-                            <div className="w-full flex 2xl:gap-5 lg:gap-4 gap-3 items-center">
+                            </motion.div>
+                            <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="w-full flex 2xl:gap-5 lg:gap-4 gap-3 items-center">
                                 <img src="/assets/Images/images/star.svg" className="2xl:size-6 lg:size-5 size-[18px]" alt="" />
                                 <p className="text-[#81807E] 2xl:text-[18px] lg:text-[16px] text-[14px] leading-[150%]">02</p>
                                 <div className="2xl:w-[326px] lg:max-w-[275px] md:w-[175px] w-[252px] 2xl:p-2.5 lg:p-1.5 rounded-[100px] border border-[#262626] bg-[#1A1A1A]">
                                     <div style={{ width: ratings[3] }} className={` 2xl:h-2 h-1 rounded-[100px] bg-[#AE9B84]`}></div>
                                 </div>
-                            </div>
-                            <div className="w-full flex  2xl:gap-5 lg:gap-4 gap-3 items-center">
+                            </motion.div>
+                            <motion.div initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{duration:0.9,ease:"easeOut"}} viewport={{once:false,amount:0.2}} className="w-full flex  2xl:gap-5 lg:gap-4 gap-3 items-center">
                                 <img src="/assets/Images/images/star.svg" className="2xl:size-6 lg:size-5 size-[18px]" alt="" />
                                 <p className="text-[#81807E] 2xl:text-[18px] lg:text-[16px] text-[14px] leading-[150%]">01</p>
                                 <div className="2xl:w-[326px] lg:max-w-[275px] md:w-[175px] w-[252px] 2xl:p-2.5 lg:p-1.5 rounded-[100px] border border-[#262626] bg-[#1A1A1A]">
                                     <div style={{ width: ratings[4] }} className={` 2xl:h-2 h-1 rounded-[100px] bg-[#AE9B84]`}></div>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>
