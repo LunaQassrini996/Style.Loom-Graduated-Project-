@@ -37,7 +37,7 @@ const InfoCard = ({
           </div>
         )}
         <div className="flex flex-col justify-center items-start gap-4 w-full">
-        <h3 className="text-white 2xl:text-2xl lg:text-xl md:text-lg text-lg font-medium ">{title}</h3>
+        <h3 className="text-brown-60 dark:text-white 2xl:text-2xl lg:text-xl md:text-lg text-lg font-medium ">{title}</h3>
         <p className=" text-gray-400 2xl:text-lg lg:text-base md:text-base text-sm font-normal ">{description}</p>
         </div>
         

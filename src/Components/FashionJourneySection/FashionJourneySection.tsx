@@ -14,7 +14,7 @@ export default function FashionJourneySection() {
 
         <div className="grid grid-cols-1 md:grid-cols-4 2xl:divide-x-2 lg:divide-x-2 md:divide-x-2 divide-y-2 divide-dashed divide-dark-15">
           <div className="2xl:p-[50px] lg:p-10 md:p-10 p-[30px] flex flex-col justify-start items-start gap-[30px]">
-            <p className=" 2xl:text-xl lg:text-lg md:text-lg text-base font-normal font-mono text-zinc-700">
+            <p className=" 2xl:text-xl lg:text-lg md:text-lg text-base font-normal font-mono text-brown-60 dark:text-zinc-700">
               Step 01
             </p>
             <div className="flex flex-col justify-start items-start gap-4">
@@ -29,7 +29,7 @@ export default function FashionJourneySection() {
           </div>
 
           <div className="2xl:p-[50px] lg:p-10 md:p-10 p-[30px] flex flex-col justify-start items-start gap-[30px]">
-            <p className=" 2xl:text-xl lg:text-lg md:text-lg text-base font-normal font-mono text-zinc-700">
+            <p className=" 2xl:text-xl lg:text-lg md:text-lg text-base font-normal font-mono text-brown-60 dark:text-zinc-700">
               Step 02
             </p>
             <div className="flex flex-col justify-start items-start gap-4">
@@ -44,7 +44,7 @@ export default function FashionJourneySection() {
           </div>
 
           <div className="2xl:p-[50px] lg:p-10 md:p-10 p-[30px] flex flex-col justify-start items-start gap-[30px]">
-            <p className=" 2xl:text-xl lg:text-lg md:text-lg text-base font-normal font-mono text-zinc-700">
+            <p className=" 2xl:text-xl lg:text-lg md:text-lg text-base font-normal font-mono text-brown-60 dark:text-zinc-700">
               Step 03
             </p>
             <div className="flex flex-col justify-start items-start gap-4">
@@ -59,7 +59,7 @@ export default function FashionJourneySection() {
           </div>
 
           <div className="2xl:p-[50px] lg:p-10 md:p-10 p-[30px] flex flex-col justify-start items-start gap-[30px]">
-            <p className=" 2xl:text-xl lg:text-lg md:text-lg text-base font-normal font-mono text-zinc-700">
+            <p className=" 2xl:text-xl lg:text-lg md:text-lg text-base font-normal font-mono text-brown-60 dark:text-zinc-700">
               Step 04
             </p>
             <div className="flex flex-col justify-start items-start gap-4">

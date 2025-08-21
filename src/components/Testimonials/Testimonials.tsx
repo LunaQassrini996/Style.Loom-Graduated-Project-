@@ -23,7 +23,7 @@ const Testimonials = () => {
     showAll || !isSmallScreen ? testimonials : testimonials.slice(0, 3);
 
   return (
-    <section className="bg-dark-06 text-white  2xl:px-[162px] lg:px-[80px] md:px-10 px-4 2xl:py-[100px] lg:py-20 md:py-20 py-[50px] ">
+    <section className="bg-dark-transparent text-white  2xl:px-[162px] lg:px-[80px] md:px-10 px-4 2xl:py-[100px] lg:py-20 md:py-20 py-[50px] ">
       <div className="border-2 border-dashed border-dark-15 rounded-[20px] ">
         <TopBanner imgNumber={1} title="The StyleLoom Testimonial Collection." paragraph="At StyleLoom, our customers are the heartbeat of our brand."/>
       </div>
@@ -56,7 +56,7 @@ const Testimonials = () => {
                     className=" 2xl:w-20 lg:w-[60px] md:w-[50px] w-[50px] rounded-full mr-3 "
                   />
                   <div>
-                    <p className="2xl:text-xl lg:text-lg md:text-base text-base font-medium font-roboto whitespace-nowrap">
+                    <p className="2xl:text-xl lg:text-lg md:text-base text-base font-medium text-brown-60 dark:text-white font-roboto whitespace-nowrap">
                       {testimonial.name}
                     </p>
                     <p className="2xl:text-lg lg:text-base md:text-sm text-sm font-normal font-mono text-zinc-600">

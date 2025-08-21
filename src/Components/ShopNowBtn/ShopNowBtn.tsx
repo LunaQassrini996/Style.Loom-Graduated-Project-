@@ -10,11 +10,11 @@ export interface props {
 export default function ShopNowBtn({ path, btnTitle, showIcon, width, cart }: props) {
     const navigate = useNavigate()
     return (
-        <button onClick={() => navigate(path)} className={`cursor-pointer whitespace-nowrap relative ${width} rounded-[12px] border-2 border-dashed border-[#404040] 2xl:py-[18px] 2xl:px-6 py-3.5 px-5 bg-[#1F1F1F] text-white`}>
+        <button onClick={() => navigate(path)} className={`cursor-pointer whitespace-nowrap relative ${width} rounded-[12px] border-2 border-dashed border-[#404040] 2xl:py-[18px] 2xl:px-6 py-3.5 px-5 bg-brown-60 dark:bg-dark-12 text-white`}>
             <div className="flex justify-center items-center gap-1">
-                {cart && <img src="/images/cart.svg" alt="" />}
+                {cart && <img src="/assets/Images/images/cart.svg" alt="" />}
                 <p className="2xl:text-lg text-sm leading-[150%] text-white">{btnTitle}</p>
-                {showIcon && <img src="/images/linkArrow.svg" className="2xl:size-[16.5px] size-[13.75px]" alt="" />}
+                {showIcon && <img src="/assets/Images/images/linkArrow.svg" className="2xl:size-[16.5px] size-[13.75px]" alt="" />}
             </div>
             <div className="size-[16.5px] 2xl:rounded-tl-[12px] rounded-tl-[8px] absolute top-0 left-0 border-t border-l border-brown-60 "></div>
             <div className="size-[16.5px] 2xl:rounded-tr-[12px] rounded-tr-[8px] absolute top-0 right-0 border-t border-r border-brown-60 "></div>

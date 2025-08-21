@@ -53,9 +53,9 @@ export default function Footer() {
           <input
             type="email"
             placeholder="Your Email"
-            className="w-full 2xl:px-6 lg:px-5 md:px-5 px-5 2xl:py-[18px] lg:py-[14px] md:py-[14px] py-[14px] pr-10 rounded-xl bg-dark-10 text-white placeholder-zinc-600 placeholder:font-normal 2xl:placeholder:text-lg lg:placeholder:text-sm md:placeholder:text-sm placeholder:text-sm placeholder:font-mono focus:outline-none"
+            className="w-full 2xl:px-6 lg:px-5 md:px-5 px-5 2xl:py-[18px] lg:py-[14px] md:py-[14px] py-[14px] pr-10 rounded-xl bg-brown-70 dark:bg-dark-10 text-white placeholder-zinc-600 placeholder:font-normal 2xl:placeholder:text-lg lg:placeholder:text-sm md:placeholder:text-sm placeholder:text-sm placeholder:font-mono focus:outline-none"
           />
-          <FaArrowRight className="absolute right-3 top-1/2 transform -translate-y-1/2 text-brown-60" />
+          <FaArrowRight className="absolute right-3 top-1/2 transform -translate-y-1/2  text-dark-20 dark:text-brown-60" />
         </div>
       </div>
     </div>

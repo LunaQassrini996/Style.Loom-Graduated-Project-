@@ -51,27 +51,30 @@ const ProductsComponent: React.FC = () => {
     )
 
     return (
-        <div className="lg:w-full justify-self-center md:w-full w-full ">
-            <div className=" w-full  2xl:rounded-t-[20px] lg:rounded-t-2xl rounded-t-[14px] xl:border-2 xl:border-b-0 lg:border-[1.5px] lg:border-b-0  border border-b-0 border-dashed border-dark-15 ">
+        <section className="2xl:px-[162px] lg:px-[80px] md:px-10 px-4 2xl:pt-[183px] lg:pt-[137px] pt-[146px] ">
+            <div className=" justify-self-center md:w-full w-full  2xl:rounded-t-[20px]   border-2   border-dashed border-dark-15">
+            <div className=" w-full border-b-2 border-dashed border-dark-15 ">
                 <TopBanner imgNumber={3} title="Elevate Your Style with Our Latest Collection" paragraph="Each piece is crafted to enhance your fashion statement." tabs={["All","Mens","Womens","Kids"]} action={(tab:string)=>dispatch(setCurrentProducts(tab))} />
             </div>
-            <div className="md:w-[1596px] 2xl:rounded-b-[20px] lg:rounded-b-2xl rounded-b-[14px] max-w-full mx-auto  xl:border-2 xl:border-r-0 lg:border-[1.5px] lg:border-r-0  border border-r-0 border-dashed border-dark-15">
+            <div>
                 <div
-                    className="2xl:h-[1278px]   lg:h-[982px] h-[1422px] group relative  bg-dark-06 shadow-md overflow-y-auto overflow-x-hidden cursor-grab transition-shadow custom-scrollbar "
+                    className="2xl:h-[1278px]   lg:h-[982px] h-[1422px] group relative  bg-transparent  overflow-y-auto overflow-x-hidden cursor-grab transition-shadow custom-scrollbar "
                     ref={scrollRef}
                     onMouseDown={onMouseDown}
                     style={{ WebkitOverflowScrolling: "touch" }}
                 >
-                    <div className=" grid xl:divide-y-2 lg:divide-y-[1.5px]   divide-y-[1px] divide-dashed divide-dark-15  lg:grid-cols-3 md:grid-cols-2 grid-cols-1 2xl:auto-rows-[639px] lg:auto-rows-[491px] auto-rows-[474px]   ">
+                    <div className=" w-full grid  xl:divide-y-2 divide lg:divide-y-[1.5px]   divide-y-[1px] divide-dashed divide-dark-15  lg:grid-cols-3 md:grid-cols-2 grid-cols-1 2xl:auto-rows-[639px] lg:auto-rows-[491px] auto-rows-[474px]   ">
                         {cards.slice(0,12)}
                     </div>
                 </div>
                 <div onClick={()=>navigate('/products')} className="cursor-pointer md:hidden w-full py-[30px] px-5 gap-2.5 flex items-center justify-center rounded-b-[14px] border-t border-r border-dashed border-[#262626]">
                     <p className="text-[#24241f] text-[16px] leading-[150%] font-mono ">View All</p>
-                    <img src="/images/downarrow.svg" className="size-5" alt="" />
+                    <img src="/assets/Images/images/downarrow.svg" className="size-5" alt="" />
                 </div>
             </div>
         </div>
+        </section>
+        
     );
 };
 

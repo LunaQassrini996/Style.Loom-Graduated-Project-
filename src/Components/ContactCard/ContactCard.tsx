@@ -9,7 +9,7 @@ export interface contactProps{
 export default function ContactCard({photo,icon,contactType,btnName}:contactProps) {
   return (
     <div className=" 2xl:p-[60px] lg:p-[50px] md:p-[30px] p-[30px] relative flex  flex-col justify-center items-center 2xl:gap-[50px] lg:gap-10 md:gap-6 gap-6">
-         <img className="absolute top-0 right-0 2xl:w-[205px] 2xl:h-[164px] lg:w-[133px] lg:h-[133px] md:w-[120px] md:h-[120px] w-[100px] h-20" src={photo}/> 
+         <img className="absolute top-0 right-0 2xl:w-[205px] 2xl:h-[164px] lg:w-[133px] lg:h-[133px] md:w-[105px] md:h-[105px] w-[100px] h-20" src={photo}/> 
         <div >
             <img className="2xl:w-[94px] 2xl:h-[94px] lg:w-[76px] lg:h-[76px] md:w-[76px] md:h-[76px] w-[76px] h-[76px]" src={icon}/>
         </div>

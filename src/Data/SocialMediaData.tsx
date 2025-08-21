@@ -7,7 +7,7 @@ export interface Social {
 icons:ReactNode;
 }
 export const media:Social[]=[
-    {icons:<LuInstagram />},
+    {icons:<LuInstagram/>},
     {icons:<FaDribbble />},
     {icons:<FaTwitter />},
     {icons:<FaBehance />}

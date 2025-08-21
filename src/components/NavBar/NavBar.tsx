@@ -27,7 +27,7 @@ export default function NavBar() {
           className={({ isActive }) =>
             `2xl:text-lg lg:text-sm md:text-sm text-sm font-mono rounded-xl 2xl:px-[30px] lg:px-6 md:px-6 px-6 2xl:py-[18px] lg:py-[14px] md:py-[14px] py-[14px] transition-all duration-200 ${
               isActive
-                ? "bg-dark-10 text-white border-none"
+                ? "bg-brown-60 dark:bg-dark-10 text-white border-none"
                 : "bg-transparent text-neutral-500 border border-dashed border-dark-15"
             }`
           }
@@ -39,7 +39,7 @@ export default function NavBar() {
           className={({ isActive }) =>
             `2xl:text-lg lg:text-sm md:text-sm text-sm  font-mono rounded-xl 2xl:px-6 lg:px-5 md:px-5 px-5 2xl:py-[18px] lg:py-[14px] md:py-[14px] py-[14px] transition-all duration-200 ${
               isActive
-                ? "bg-dark-10 text-white border-none"
+                ? "bg-brown-60 dark:bg-dark-10  text-white border-none"
                 : "bg-transparent text-neutral-500 border border-dashed border-dark-15"
             }`
           }
@@ -53,10 +53,10 @@ export default function NavBar() {
       </div>
       <div className="flex justify-start items-center gap-[14px]">
         <span onClick={()=> setDarkMode((prev)=> !prev)}>{darkMode?( <IoMdMoon className="w-6 h-6 text-white" />):(<HiSun className="w-6 h-6 text-dark-06" />)}</span>
-        <button className=" rounded-xl 2xl:p-[18px] lg:p-[14px] md:p-[14px] p-[14px] bg-dark-10">
+        <button className=" rounded-xl 2xl:p-[18px] lg:p-[14px] md:p-[14px] p-[14px] bg-dark-20 dark:bg-dark-10">
           <HiShoppingCart className="w-6 h-6 text-white " />
         </button>
-        <button className="bg-brown-60 text-dark-06 2xl:text-lg lg:text-sm md:text-sm text-sm  font-normal font-mono rounded-xl px-[30px] 2xl:py-[18px] lg:py-[14px] md:py-[14px] py-[14px] ">
+        <button className="bg-brown-60 text-white dark:text-dark-06 2xl:text-lg lg:text-sm md:text-sm text-sm  font-normal font-mono rounded-xl px-[30px] 2xl:py-[18px] lg:py-[14px] md:py-[14px] py-[14px] ">
           <NavLink to={"/contact"}>Contact</NavLink>
         </button>
       </div>

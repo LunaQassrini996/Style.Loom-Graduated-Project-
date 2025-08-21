@@ -26,7 +26,7 @@ const FaqQuestions = () => {
   const visibleFaqs = isSmallScreen && !showAll ? faqs.slice(0, 3) : faqs;
 
   return(
-    <section className="bg-dark-06 text-white 2xl:px-[162px] lg:px-[80px] md:px-10 px-4 2xl:py-[100px] lg:py-20 md:py-20 py-[50px] ">
+    <section className="bg-transparent text-white 2xl:px-[162px] lg:px-[80px] md:px-10 px-4 2xl:py-[100px] lg:py-20 md:py-20 py-[50px] ">
       <div className=" relative border-2 border-dashed border-dark-15 rounded-lg overflow-hidden">
         <div className="  border-b-2 border-dashed border-dark-15">
           <TopBanner  tabs={["All","Ordering","Shipping","Returns","Support"]} action={()=>{}} imgNumber={3} title="Have Questions? We Have Answers." paragraph="Ease into the world of StyleLoom with clarity. Our FAQs cover a spectrum of topics." />
@@ -40,7 +40,7 @@ const FaqQuestions = () => {
                 index % 2 === 0 ? "md:border-r-2" : ""
               }`}
             >
-              <h3 className="2xl:text-2xl lg:text-xl md:text-lg text-lg font-medium mb-2 font-roboto text-white">
+              <h3 className="2xl:text-2xl lg:text-xl md:text-lg text-lg font-medium mb-2 font-roboto text-brown-60 dark:text-white">
                 {faq.question}
               </h3>
               <p className="2xl:text-lg lg:text-base md:text-base text-sm font-normal text-zinc-700 font-roboto">

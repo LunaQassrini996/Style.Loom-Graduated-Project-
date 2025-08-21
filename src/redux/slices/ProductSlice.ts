@@ -13,7 +13,7 @@ interface Product {
 const Products: Product[] = [
     {
         id: 1,
-        image: "/images/women4.png",
+        image: "/assets/Images/images/women4.png",
         type: "Womenswear",
         category: "Womens",
         title: "Elegant Evening Gown",
@@ -23,7 +23,7 @@ const Products: Product[] = [
     },
     {
         id: 2,
-        image: "/images/women2.png",
+        image: "/assets/Images/images/women2.png",
         type: "Womenswear",
         category: "Womens",
         title: "Timeless A-line Evening Dress",
@@ -33,7 +33,7 @@ const Products: Product[] = [
     },
     {
         id: 3,
-        image: "/images/women3.png",
+        image: "/assets/Images/images/women3.png",
         type: "Womenswear",
         category: "Womens",
         title: "Floral Bloom Maxi Dress",
@@ -43,7 +43,7 @@ const Products: Product[] = [
     },
     {
         id: 4,
-        image: "/images/women4.png",
+        image:"/assets/Images/images/women4.png",
         type: "Womenswear",
         category: "Womens",
         title: "Elegant Evening Gown",
@@ -53,7 +53,7 @@ const Products: Product[] = [
     },
     {
         id: 5,
-        image: "/images/women5.png",
+        image: "/assets/Images/images/women5.png",
         type: "Womenswear",
         category: "Womens",
         title: "Boho Chic Printed Scarf",
@@ -63,7 +63,7 @@ const Products: Product[] = [
     },
     {
         id: 6,
-        image: "/images/women2.png",
+        image: "/assets/Images/images/women2.png",
         type: "Womenswear",
         category: "Womens",
         title: "Elegant Evening Gown",
@@ -73,7 +73,7 @@ const Products: Product[] = [
     },
     {
         id: 7,
-        image: "/images/mens1.webp",
+        image: "/assets/Images/images/mens1.webp",
         type: "Menswear",
         category: "Mens",
         title: "Classic Oxford Blouse",
@@ -83,7 +83,7 @@ const Products: Product[] = [
     },
     {
         id: 8,
-        image: "/images/mens2.webp",
+        image: "/assets/Images/images/mens2.webp",
         type: "Menswear",
         category: "Mens",
         title: "Slim Fit Dress Blouse",
@@ -93,7 +93,7 @@ const Products: Product[] = [
     },
     {
         id: 9,
-        image: "/images/mens3.webp",
+        image: "/assets/Images/images/mens3.webp",
         type: "Menswear",
         category: "Mens",
         title: "Casual Linen Blouse",
@@ -103,7 +103,7 @@ const Products: Product[] = [
     },
     {
         id: 10,
-        image: "/images/mens4.webp",
+        image: "/assets/Images/images/mens4.webp",
         type: "Menswear",
         category: "Mens",
         title: "Striped Formal Blouse",
@@ -113,7 +113,7 @@ const Products: Product[] = [
     },
     {
         id: 11,
-        image: "/images/mens5.webp",
+        image: "/assets/Images/images/mens5.webp",
         type: "Menswear",
         category: "Mens",
         title: "Short Sleeve Summer Blouse",
@@ -123,7 +123,7 @@ const Products: Product[] = [
     },
     {
         id: 12,
-        image: "/images/mens6.webp",
+        image: "/assets/Images/images/mens6.webp",
         type: "Menswear",
         category: "Mens",
         title: "Embroidered Evening Blouse",
@@ -133,7 +133,7 @@ const Products: Product[] = [
     },
     {
         id: 13,
-        image: "/images/accs1.png",
+        image: "/assets/Images/images/accs1.png",
         type: "Accessories",
         category: "Womens",
         title: "Urban Chic Handbag",
@@ -143,7 +143,7 @@ const Products: Product[] = [
     },
     {
         id: 14,
-        image: "/images/accs2.png",
+        image: "/assets/Images/images/accs2.png",
         type: "Accessories",
         category: "Womens",
         title: "Timeless Fedora",
@@ -153,7 +153,7 @@ const Products: Product[] = [
     },
     {
         id: 15,
-        image: "/images/accs3.png",
+        image: "/assets/Images/images/accs3.png",
         type: "Accessories",
         category: "Womens",
         title: "Wide-Brim Bucket Hat",
@@ -163,7 +163,7 @@ const Products: Product[] = [
     },
     {
         id: 16,
-        image: "/images/bag1.png",
+        image: "/assets/Images/images/bag1.png",
         type: "Hand Bag",
         category: "Womens",
         title: "Bold Backpack",
@@ -173,7 +173,7 @@ const Products: Product[] = [
     },
     {
         id: 17,
-        image: "/images/bag2.png",
+        image: "/assets/Images/images/bag2.png",
         type: "Hand Bag",
         category: "Womens",
         title: "Night Out Glam",
@@ -183,7 +183,7 @@ const Products: Product[] = [
     },
     {
         id: 18,
-        image: "/images/bag4.png",
+        image: "/assets/Images/images/bag4.png",
         type: "Hand Bag",
         category: "Mens",
         title: "Multi Use Bag",
@@ -193,7 +193,7 @@ const Products: Product[] = [
     },
     {
         id: 19,
-        image: "/images/bag5.png",
+        image: "/assets/Images/images/bag5.png",
         type: "Hand Bag",
         category: "Mens",
         title: "vintage Bag",
@@ -203,7 +203,7 @@ const Products: Product[] = [
     },
     {
         id: 20,
-        image: "/images/bag6.png",
+        image: "/assets/Images/images/bag6.png",
         type: "Hand Bag",
         category: "Mens",
         title: "Shoulder Carried Bag",
@@ -213,7 +213,7 @@ const Products: Product[] = [
     },
     {
         id: 21,
-        image: "/images/hat1.png",
+        image: "/assets/Images/images/hat1.png",
         type: "Accessories",
         category: "Mens",
         title: "Elegant Straw Hat",
@@ -223,7 +223,7 @@ const Products: Product[] = [
     },
     {
         id: 22,
-        image: "/images/hat2.png",
+        image: "/assets/Images/images/hat2.png",
         type: "Accessories",
         category: "Mens",
         title: "Classic White Hat",
@@ -243,7 +243,7 @@ const Products: Product[] = [
     },
     {
         id: 24,
-        image: "/images/watch1.png",
+        image: "/assets/Images/images/watch1.png",
         type: "Accessories",
         category: "Mens",
         title: "Black Smart Watch",
@@ -253,7 +253,7 @@ const Products: Product[] = [
     },
     {
         id: 26,
-        image: "/images/watch2.png",
+        image: "/assets/Images/images/watch2.png",
         type: "Accessories",
         category: "Mens",
         title: "Black Vintage Watch",
@@ -263,7 +263,7 @@ const Products: Product[] = [
     },
     {
         id: 27,
-        image: "/images/watch3.png",
+        image: "/assets/Images/images/watch3.png",
         type: "Accessories",
         category: "Mens",
         title: "Classic Silver Watch",
@@ -273,7 +273,7 @@ const Products: Product[] = [
     },
     {
         id: 28,
-        image: "/images/kids1.webp",
+        image: "/assets/Images/images/kids1.webp",
         type: "Kidswear",
         category: "Kids",
         title: "Princess Sparkle Dress",
@@ -283,7 +283,7 @@ const Products: Product[] = [
     },
     {
         id: 29,
-        image: "/images/kids2.png",
+        image: "/assets/Images/images/kids2.png",
         type: "Kidswear",
         category: "Kids",
         title: "Princess blue Dress",
@@ -293,7 +293,7 @@ const Products: Product[] = [
     },
     {
         id: 30,
-        image: "/images/kids3.png",
+        image: "/assets/Images/images/kids3.png",
         type: "Kidswear",
         category: "Kids",
         title: "white t shirt",
@@ -303,7 +303,7 @@ const Products: Product[] = [
     },
     {
         id: 31,
-        image: "/images/kids4.webp",
+        image: "/assets/Images/images/kids4.webp",
         type: "Kidswear",
         category: "Kids",
         title: "baige t shirt",
@@ -313,7 +313,7 @@ const Products: Product[] = [
     },
     {
         id: 32,
-        image: "/images/kids2.png",
+        image: "/assets/Images/images/kids2.png",
         type: "Accessories",
         category: "Kids",
         title: "Princess blue Dress",
@@ -323,7 +323,7 @@ const Products: Product[] = [
     },
     {
         id: 33,
-        image: "/images/kids3.png",
+        image: "/assets/Images/images/kids3.png",
         type: "Kidswear",
         category: "Kids",
         title: "white t shirt",
@@ -333,7 +333,7 @@ const Products: Product[] = [
     },
     {
         id: 34,
-        image: "/images/accs1.png",
+        image: "/assets/Images/images/accs1.png",
         type: "Hand Bag",
         category: "Womens",
         title: "Urban Chic Handbag",
@@ -343,7 +343,7 @@ const Products: Product[] = [
     },
     {
         id: 35,
-        image: "/images/kidshat1.webp",
+        image: "/assets/Images/images/kidshat1.webp",
         type: "Accessories",
         category: "Kids",
         title: "Cute hat",
@@ -353,7 +353,7 @@ const Products: Product[] = [
     },
     {
         id: 36,
-        image: "/images/kidshat2.webp",
+        image: "/assets/Images/images/kidshat2.webp",
         type: "Accessories",
         category: "Kids",
         title: "Cute hat",
